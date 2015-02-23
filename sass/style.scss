@@ -1,0 +1,46 @@
+@import 'layout';
+$backgroundColor: #DDD;
+$borderColor: #000;
+
+body{ margin: 0; background-color:lightseagreen}
+
+header{
+  @include row;  
+  height: 100px;
+}
+
+h1{
+  color:#000;
+}
+
+.content{
+  @include row;
+  overflow-y: auto;
+  top: 200px;
+  bottom: 50px;
+}
+
+footer{
+  @include row;
+  bottom: 0;
+  height: 50px;
+  text-align: center;
+}
+
+.editor, .preview{
+  @include col; 
+  width: 50%;
+  background-color: $backgroundColor; 
+  border: 1px solid $borderColor;
+}
+
+textarea.input{
+  height: 100%;
+  padding: 1%;
+  width: 100%;
+}
+
+.preview{
+  padding: 1%;
+  right: 0;
+}
