@@ -4,7 +4,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.config('concat', {
         scripts: {
-            src: ['bower_components/angular/angular.js',
+            src: ['bower_components/jquery/dist/jquery.js',
+                'bower_components/angular/angular.js',
                 'js/app.js'],
             dest: 'tmp/app.js'
         }
