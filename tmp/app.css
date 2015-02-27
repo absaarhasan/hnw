@@ -1,54 +1,46 @@
-body {
-  margin: 0;
-  background-color: lightseagreen; }
+/*
+body{ margin: 0; background-color:lightseagreen}
 
-header {
-  box-sizing: border-box;
-  overflow: hidden;
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 100px; }
+header{
+  @include row;  
+  height: 100px;
+}
 
-h1 {
-  color: #000; }
+h1{
+  color:#000;
+}
 
-.content {
-  box-sizing: border-box;
-  overflow: hidden;
-  position: absolute;
-  left: 0;
-  right: 0;
+.content{
+  @include row;
   overflow-y: auto;
   top: 200px;
-  bottom: 50px; }
+  bottom: 50px;
+}
 
-footer {
-  box-sizing: border-box;
-  overflow: hidden;
-  position: absolute;
-  left: 0;
-  right: 0;
+footer{
+  @include row;
   bottom: 0;
   height: 50px;
-  text-align: center; }
+  text-align: center;
+}
 
-.editor, .preview {
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  bottom: 0;
+.editor, .preview{
+  @include col; 
   width: 50%;
-  background-color: #DDD;
-  border: 1px solid #000; }
+  background-color: $backgroundColor; 
+  border: 1px solid $borderColor;
+}
 
-textarea.input {
+textarea.input{
   height: 100%;
   padding: 1%;
-  width: 100%; }
+  width: 100%;
+}
 
-.preview {
+.preview{
   padding: 1%;
-  right: 0; }
+  right: 0;
+}
+*/
 
 /*# sourceMappingURL=app.css.map */

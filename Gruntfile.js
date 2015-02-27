@@ -37,6 +37,32 @@ module.exports = function(grunt) {
         }
     });
 
+    grunt.loadNpmTasks('grunt-svgmin');
+
+    grunt.config('svgmin', {
+        options: {
+            plugins: [
+                {
+                    removeViewBox: false
+                }, {
+                    removeUselessStrokeAndFill: false
+                }
+            ]
+        },
+        dist: {
+            files: [
+                {
+                    expand: true,
+                    cwd: 'svg/',
+                    src: ['*.svg'],
+                    dest: 'images',
+                    ext: '.svg'
+
+                }
+            ]
+        }
+    });
+
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     grunt.config('watch', {
@@ -64,7 +90,7 @@ module.exports = function(grunt) {
     });
 
     grunt.registerTask('build', "Builds the application.",
-        ['concat:scripts', 'sass', 'cssmin', 'uglify' ]);
+        ['concat:scripts', 'sass', 'cssmin', 'uglify', 'svgmin' ]);
 
 
 };
