@@ -6,8 +6,8 @@ module.exports = function(grunt) {
         scripts: {
             src: ['bower_components/jquery/dist/jquery.js',
                 'bower_components/angular/angular.js',
-                'js/app.js'],
-            dest: 'tmp/app.js'
+                'js/main.js'],
+            dest: 'tmp/main.js'
         }
     });
 
@@ -15,7 +15,7 @@ module.exports = function(grunt) {
     grunt.config('uglify', {
         scripts: {
             files: {
-                'assets/app.js' : 'tmp/app.js'
+                'public/assets/app.js' : 'tmp/main.js'
             }
         }
     });
@@ -33,7 +33,7 @@ module.exports = function(grunt) {
     grunt.config('cssmin', {
         app: {
             files: {
-                'assets/app.css': ['tmp/app.css']
+                'public/assets/app.css': ['tmp/app.css']
             }
         }
     });
@@ -56,7 +56,7 @@ module.exports = function(grunt) {
                     expand: true,
                     cwd: 'svg/',
                     src: ['*.svg'],
-                    dest: 'images',
+                    dest: 'public/images',
                     ext: '.svg'
 
                 }

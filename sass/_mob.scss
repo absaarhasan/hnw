@@ -1,0 +1,334 @@
+$base-font-size: 12px;
+$bfs: $base-font-size;
+
+
+@media only screen and (max-width : 320px){
+  html {
+    font-size: $base-font-size;
+  }
+}
+
+@media only screen and (min-width : 321px){
+  html {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (min-width : 400px){
+  html {
+    font-size: 16px;
+  }
+}
+
+
+//high res devices
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3),only screen and (min-resolution: 1.3dppx), only screen and (min-resolution: 124dpi){
+  html {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-device-width : 319px) and (-webkit-min-device-pixel-ratio: 1.3), only screen and (max-device-width : 319px) and (min--moz-device-pixel-ratio: 1.3), only screen and (max-device-width : 319px) and (min-resolution: 1.3dppx), only screen and (max-device-width : 319px) and (min-resolution: 124dpi) {
+  html {
+    font-size: 10px;
+  }
+}
+
+
+@media only screen and (max-device-width : 399px) and (-webkit-min-device-pixel-ratio: 3), only screen and (min--moz-device-pixel-ratio: 3),only screen and (min-resolution: 3dppx), only screen and (min-resolution: 288dpi){
+  html {
+    font-size: 14px;
+  }
+
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 3),only screen and (min--moz-device-pixel-ratio: 3),only screen and (min-resolution: 3dppx), only screen and (min-resolution: 288dpi){
+  html {
+    font-size: 16px;
+  }
+
+}
+
+.full{
+  display:none;
+}
+
+header.main {
+  padding-top:  em(10px, $bfs);
+  height:em(90px, $bfs);
+
+  h1{
+    background-image: url("../images/logo_mob.svg");
+    margin-left:5%;
+    height:em(90px, $bfs);
+    background-size: em(92px, $bfs) em(66px, $bfs);
+
+  }
+
+  nav.mob {
+
+    top:0;
+    left:0;
+    width:100%;
+    height:0;
+    z-index:10;
+
+    button {
+      position:absolute;
+      right:5%;
+      top: em(25px, $bfs);
+      z-index:12;
+      display:inline-block;
+      text-indent: -999px;
+      background-color: $mainColor1;
+      width:em(60px, $bfs);
+      height:em(35px, $bfs);
+      background-image:  url("../images/arrow_menu.svg");
+      background-repeat: no-repeat;
+      background-size: em(29px, $bfs) em(15px, $bfs);
+      background-position:center;
+      cursor: pointer;
+
+    }
+
+    #main-menu{
+      display:none;
+      z-index:11;
+      position:absolute;
+      width:100%;
+      background-color:$mainColor5;
+      position:absolute;
+      top:0;
+      left:0;
+      @include drop-shadow(0px, 4px, 8px, 2px, 0.25);
+
+    }
+
+    h2{
+
+      position:absolute;
+      z-index:12;
+      left:5%;
+      top:em(15px, $bfs);
+      color:$mainColor3;
+      font-size:em(24px, $bfs);
+    }
+
+    ul{
+
+      box-sizing: border-box;
+      display:block;
+      margin-top: em(60px, $bfs);
+      padding-top:em(10px, $bfs);
+      background-color: $mainColor1;
+      padding-bottom: em(50px, $bfs);
+
+      li {
+        display:block;
+        height: em(40px, $bfs);
+        margin:em(25px, $bfs) 5% 0;
+        box-sizing: border-box;
+        border: 1px solid $mainColor3;
+
+        a {
+
+          box-sizing: border-box;
+          display:block;
+          border-left:em(10px, $bfs) solid transparent;
+          border-right:em(10px, $bfs) solid transparent;
+
+          text-align:left;
+          height:100%;
+          text-decoration:none;
+          padding-top: em(5px, $bfs);
+          font-size: em(20px, $bfs);
+          color: $txt4;
+          font-weight: 200;
+
+        }
+
+        a:hover, a:active {
+          background-image: url("../images/arrow_back.svg");
+          background-repeat:no-repeat;
+          background-size: em(15px, $bfs) em(25px, $bfs)  ;
+          background-position:right center;
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+section.main{
+
+  header{
+    height: em(45px, $bfs);
+
+    h2 {
+      font-size:  em(24px, $bfs);
+      margin: em(5px, $bfs) 0 0 5%;
+    }
+
+    .filter-menu{
+      top:0;
+      width:100%;
+
+      button{
+        right:5%;
+        width:em(20px, $bfs);
+        height:em(20px, $bfs);
+        background-size: em(20px, $bfs) em(10px, $bfs) ;
+        background-position:center;
+        top: em(10px, $bfs);
+        text-indent: -999px;
+      }
+    }
+
+  }
+
+  footer {
+
+    height:em(50px, $bfs);
+    padding-top:em(10px, $bfs);
+
+    button{
+      background-image: url("../images/arrow_prev.svg"), url("../images/arrow_next.svg");
+      background-position: left center, right center;
+      background-size: em(10px, $bfs)  em(20px, $bfs) ;
+      padding: 0 em(25px, $bfs);
+      color:$txt1;
+      font-weight:400;
+      font-size:em(12px, $bfs);
+      height:em(25px, $bfs);
+      line-height:em(25px, $bfs);
+    }
+
+  }
+
+}
+
+#filter-menu {
+
+  right: 0;
+  background-color: $mainColor1;
+  width: 100%;
+
+  padding-top: em(50px, $bfs);
+
+
+  h3{
+    position:absolute;
+    top:em(10px, $bfs);
+    left:5%;
+    color:$mainColor3;
+    font-size: em(20px, $bfs);
+  }
+
+
+  ul{
+    padding-bottom: em(25px, $bfs);
+  }
+
+  li{
+    margin:em(25px, $bfs) 5% 0 ;
+  }
+
+  a{
+    padding: em(10px, $bfs) em(10px, $bfs);
+    font-size: em(20px, $bfs);
+  }
+
+  a:hover, a:focus {
+
+    background-size: em(10px, $bfs) em(20px, $bfs)  ;
+
+    border-right: em(10px, $bfs) solid transparent;
+  }
+
+
+}
+
+.result-tile {
+  margin-top: em(5px, $bfs);
+  background-position: left, 5% em(15px, $bfs);
+  background-size: em(5px, $bfs) em(5px, $bfs), em(24px, $bfs) em(23px, $bfs) ;
+
+  h3{
+
+    margin: em(15px, $bfs) 0 0 15%;
+    font-size: em(12px, $bfs);
+    max-width: 65%;
+    line-height: em(19px, $bfs);
+
+  }
+
+  ul{
+
+    margin-left: 15%;
+
+  }
+
+  li{
+
+    font-weight:400;
+    line-height: em(19px, $bfs);
+
+    span{
+      font-weight:400;
+    }
+  }
+
+  p{
+    display:inline-block;
+    margin-left: 15%;
+    padding-bottom:15px;
+    line-height: em(19px, $bfs);
+  }
+
+  button {
+    right:5%;
+    top: 50%;
+    margin-top: em(-23px, $bfs);
+    background-size: em(25px, $bfs) em(45px, $bfs);
+    height: em(45px, $bfs);
+    width: em(25px, $bfs);
+  }
+}
+
+footer.main {
+
+  height:em(200px, $bfs);
+
+  h3{
+    font-size:em(12px, $bfs);
+    margin-top:em(30px, $bfs);
+    font-weight:400;
+  }
+
+  ul {
+    margin:0 5%;
+  }
+  ul:nth-child(2){
+
+    margin-top:em(25px, $bfs);
+
+  }
+
+  li{
+    font-size:em(12px, $bfs);
+    padding: 0 em(5px, $bfs);
+    margin-top:em(5px, $bfs);
+
+  }
+
+  @media only screen and (max-width : 449px){
+    ul:last-child li:last-child {
+      border-left:0;
+
+    }
+  }
+
+}
