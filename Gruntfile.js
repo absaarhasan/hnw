@@ -6,6 +6,7 @@ module.exports = function(grunt) {
         scripts: {
             src: ['bower_components/jquery/dist/jquery.js',
                 'bower_components/angular/angular.js',
+                'js/jquery.trap.js',
                 'js/main.js'],
             dest: 'tmp/main.js'
         }

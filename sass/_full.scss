@@ -140,7 +140,7 @@ section.main{
       height: em(25px, $bfs);
       background-size: em(13px, $bfs)  em(25px, $bfs) ;
       background-position:right top;
-      text-indent:-999px;
+      text-indent:-99999px;
       background-position:right top;
 
         &#prev{
@@ -200,7 +200,7 @@ section.main{
 
   }
 
-  a:hover, a:focus {
+  a:hover, a:active {
 
     background-size: em(15px, $bfs) em(25px, $bfs)  ;
 
