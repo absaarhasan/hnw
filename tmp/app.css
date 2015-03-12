@@ -15,7 +15,9 @@ header {
   box-sizing: border-box; }
   header h1 {
     text-indent: -99999px;
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    display: inline-block;
+    cursor: pointer; }
   header nav {
     position: absolute; }
     header nav ul {
@@ -274,7 +276,8 @@ footer.main {
     header.main h1 {
       background-image: url("../images/logo_mob.svg");
       margin-left: 5%;
-      height: 7.5rem;
+      height: 5.5rem;
+      width: 7.75rem;
       background-size: 7.66667rem 5.5rem; }
     header.main nav.mob {
       top: 0;
@@ -588,6 +591,7 @@ footer.main {
       background-image: url("../images/logo_full.svg");
       margin-left: 4%;
       height: 6.25rem;
+      width: 21.1rem;
       background-size: 21.1rem 6.25rem; }
     header.main nav.full {
       right: 4%;

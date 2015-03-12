@@ -60,7 +60,8 @@ header.main {
   h1{
     background-image: url("../images/logo_mob.svg");
     margin-left:5%;
-    height:em(90px, $bfs);
+    height:em(66px, $bfs);
+    width:em(93px, $bfs);
     background-size: em(92px, $bfs) em(66px, $bfs);
 
   }

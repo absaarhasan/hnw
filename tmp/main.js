@@ -35584,6 +35584,8 @@ $(function() {
 
     }
 
+    dummyLink();
+
 });
 
 /*------------------------- MENUS ----------------------------- */
@@ -35668,6 +35670,26 @@ function radioGroup() {
         });
 
     });
+
+}
+
+/*------------------------- DUMMY LINK ----------------------------- */
+
+function dummyLink() {
+
+
+    $( "header.main" ).on( "click", "h1", function() {
+
+        var nextLink = $(this).find('a').attr('href');
+
+        window.location.href=nextLink;
+
+    });
+
+
+
+
+
 
 }
 
