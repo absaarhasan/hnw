@@ -143,7 +143,7 @@ header.main {
           padding-top: em(5px, $bfs);
           font-size: em(20px, $bfs);
           color: $txt4;
-          font-weight: 200;
+
 
         }
 
@@ -172,7 +172,7 @@ section.main{
       margin: em(5px, $bfs) 0 0 5%;
     }
 
-    .filter-menu{
+    .filter-menu {
       top:0;
       width:100%;
 
@@ -187,26 +187,25 @@ section.main{
       }
     }
 
-  }
+    .back-button {
+      top:0;
+      width:100%;
 
-  footer {
+      button{
+        top: 0;
+        right:5%;
+        width:em(45px, $bfs);
+        height:em(45px, $bfs);
+        background-size: em(10px, $bfs) em(20px, $bfs)  ;
+        background-position:center right;
 
-    height:em(50px, $bfs);
-    padding-top:em(10px, $bfs);
-
-    button{
-      background-image: url("../images/arrow_prev.svg"), url("../images/arrow_next.svg");
-      background-position: left center, right center;
-      background-size: em(10px, $bfs)  em(20px, $bfs) ;
-      padding: 0 em(25px, $bfs);
-      color:$txt1;
-      font-weight:400;
-      font-size:em(12px, $bfs);
-      height:em(25px, $bfs);
-      line-height:em(25px, $bfs);
+        text-indent: -99999px;
+      }
     }
 
   }
+
+
 
 }
 
@@ -296,6 +295,206 @@ section.main{
     height: em(45px, $bfs);
     width: em(25px, $bfs);
   }
+}
+
+footer.pagination {
+
+  height:em(50px, $bfs);
+  padding-top:em(10px, $bfs);
+
+  button{
+    background-image: url("../images/arrow_prev.svg"), url("../images/arrow_next.svg");
+    background-position: left center, right center;
+    background-size: em(10px, $bfs)  em(20px, $bfs) ;
+    padding: 0 em(25px, $bfs);
+    color:$txt1;
+    font-weight:400;
+    font-size:em(12px, $bfs);
+    height:em(25px, $bfs);
+    line-height:em(25px, $bfs);
+  }
+
+}
+
+.form-row:nth-child(2) {
+  margin-top: em(10px, $bfs);
+
+}
+
+.form-row {
+  padding:em(15px, $bfs) 0 em(10px, $bfs) 0 ;
+
+  h3 {
+    font-size:em(12px, $bfs);
+    margin:0 5%;
+  }
+
+  label{
+    margin-left:5%;
+    font-size: em(12px, $bfs);
+    line-height:em(20px, $bfs);
+
+  }
+
+  label.radio {
+    padding-left:em(35px, $bfs);
+    background-size: em(20px, $bfs) em(20px, $bfs);
+
+  }
+
+  input.text{
+    font-size: em(12px, $bfs);
+    margin: em(10px, $bfs) 0 0 5%;
+    width:90%;
+    height:em(35px, $bfs);
+    padding:em(2px, $bfs) em(5px, $bfs);
+  }
+
+  textarea {
+    padding:em(2px, $bfs) em(5px, $bfs);
+    font-size: em(12px, $bfs);
+    margin: em(10px, $bfs) 0 0 5%;
+    width:90%;
+    height:em(105px, $bfs);
+  }
+
+  p.count {
+
+    top:em(15px, $bfs);
+    left:5%;
+    width:90%;
+
+  }
+
+}
+
+.form-row.error {
+  p#error {
+    text-align:center;
+    margin-top:em(10px, $bfs);
+    padding:em(5px, $bfs) 5% em(10px, $bfs) 5%;
+  }
+}
+
+footer.form-button{
+
+  margin-top:em(35px, $bfs);
+  padding:0 5% em(45px, $bfs) 5%;
+
+  button{
+
+    font-size: em(12px, $bfs);
+    width:em(135px, $bfs);
+    height:em(35px, $bfs);
+
+  }
+
+}
+
+section.poll-display{
+  margin-top: em(5px, $bfs);
+  padding: em(10px, $bfs) 0 em(30px, $bfs) 0;
+  background-size: em(5px, $bfs) em(5px, $bfs),em(25px, $bfs) em(25px, $bfs);
+  background-position: left, 5% em(10px, $bfs);
+
+  h3 {
+    margin: 0 15%;
+    font-size: em(14px, $bfs);
+    line-height:em(22px, $bfs);
+  }
+
+  p.main-result{
+    font-size: em(24px, $bfs);
+    margin: 0 15%;
+    display:inline-block;
+    margin-top: em(10px, $bfs);
+
+  }
+
+  table{
+
+    margin:em(15px, $bfs) 5% 0 5%;
+    width:90%;
+
+    td {
+      font-size:em(14px, $bfs);
+      padding:0 em(10px, $bfs);
+    }
+
+    td.option {
+      height:em(27px, $bfs);
+      width:em(25px, $bfs);
+    }
+  }
+
+  div.fake-poll{
+    margin-top: em(35px, $bfs);
+    display:inline-block;
+    height: em(240px, $bfs);
+    width:100%;
+    background-size: em(240px, $bfs) em(240px, $bfs);
+
+  }
+
+  p.total-votes {
+    display:inline-block;
+    margin:em(25px, $bfs) 5% 0 5%;
+    width:90%;
+    font-size:em(14px, $bfs);
+
+  }
+
+  button {
+    position:relative;
+    left:50%;
+    display:inline-block;
+    margin: em(25px, $bfs)  0 0 em(-80px, $bfs);
+    width:em(160px, $bfs);
+    height:em(35px, $bfs);
+    font-size:em(12px, $bfs);
+  }
+
+  p.author {
+    font-size:em(14px, $bfs);
+    margin:em(25px, $bfs) 5% 0 5%;
+    line-height: em(20px, $bfs);
+  }
+
+  p.time-stamp {
+    font-size:em(14px, $bfs);
+    margin:0 5% 0 5%;
+    line-height: em(20px, $bfs);
+  }
+}
+
+section.poll-comments{
+
+  div.comment:nth-child(2){
+    margin-top:0;
+  }
+
+  div.comment {
+    margin-top: em(5px, $bfs);
+    background-size: em(5px, $bfs) em(5px, $bfs);
+    padding: em(15px, $bfs) 5%;
+  }
+
+  h3 {
+
+    font-size:em(14px, $bfs);
+    font-weight:400;
+
+  }
+
+  p {
+
+    font-size:em(14px, $bfs);
+
+  }
+
+
+
+
 }
 
 footer.main {

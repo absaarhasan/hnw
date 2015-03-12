@@ -5,7 +5,12 @@ $mainColor2: #0f8add; // blue
 $mainColor3: #fff; // white
 $mainColor4: #fbfb2e; // yellow
 $mainColor5: #000; // black
+$mainColor6: #ff3333; // red
 $mainTint1: #e9f5fe; // off white blue
+
+$option1: #009999;
+$option2: #fbaf5d;
+$option3: #fff200;
 
 $txt1: #042236; // dark blue
 $txt2: #0a5f98; // mid blue
@@ -16,7 +21,7 @@ $txt5: #ff3333; // red
 /*------------- FUNCTIONS -----------------*/
 
 @function em($target, $context) {
-  @if $target == 0 { @return 0 }
+  @if $target == 0px { @return 0 }
   @return $target / $context + 0rem;
 }
 
@@ -39,8 +44,7 @@ $txt5: #ff3333; // red
   outline:0;
   font-weight:300;
   letter-spacing: 0.025em;
-  font-family: 'azo-sans-web'; //300,500
-
+  font-family: 'azo-sans-web'; //300,400
 
 }
 
@@ -87,7 +91,7 @@ section.main{
       color: $txt4;
     }
 
-    .filter-menu{
+    .filter-menu, .back-button {
       position:absolute;
 
       button{
@@ -96,7 +100,19 @@ section.main{
         background-color:transparent;
         background-repeat:no-repeat;
         cursor: pointer;
+
+      }
+    }
+
+    .filter-menu {
+      button{
         background-image: url("../images/arrow_sort.svg");
+      }
+    }
+
+    .back-button {
+      button{
+        background-image: url("../images/arrow_back.svg");
       }
     }
 
@@ -104,19 +120,9 @@ section.main{
 
   }
 
-  footer {
-
-    box-sizing: border-box;
-    text-align:center;
 
 
-    button {
-      background-color:transparent;
-      background-repeat:no-repeat;
-      display:inline-block;
-      vertical-align: middle;
-    }
-  }
+
 
 }
 
@@ -203,11 +209,229 @@ section.main{
   }
 }
 
+footer.pagination {
+
+  box-sizing: border-box;
+  text-align:center;
+
+
+  button {
+    background-color:transparent;
+    background-repeat:no-repeat;
+    display:inline-block;
+    vertical-align: middle;
+  }
+}
+
+.form-row {
+  box-sizing: border-box;
+  position:relative;
+
+  h3 {
+    color:$txt1;
+    font-weight:400;
+
+  }
+
+  label{
+    display:block;
+    color:$txt1;
+    font-weight:400;
+
+
+
+    span{
+
+      color:$txt3;
+      font-weight:300;
+
+    }
+
+  }
+
+  input[type='radio']{
+    display:absolute;
+    top:0;
+    left:0;
+    height:1px;
+    width:1px;
+    visibility:hidden;
+
+  }
+
+  label.radio{
+    background-image: url("../images/checkbox.svg");
+    background-repeat:  no-repeat;
+    background-position:left top;
+    cursor: pointer;
+  }
+
+  label.radio.checked{
+    background-image: url("../images/checkbox_ticked.svg");
+
+  }
+
+
+  input.text, textarea {
+    box-sizing: border-box;
+    border:1px solid $mainColor2;
+    background-color: $mainColor3;
+    display:inline-block;
+    color:$txt1;
+  }
+
+  p.count {
+    color:$txt3;
+    position:absolute;
+    text-align:right;
+  }
+
+}
+
+.form-row.error{
+
+  background-color:$mainColor4;
+
+
+
+
+  input.text{
+    border-color: $mainColor6;
+  }
+
+  textarea{
+    border-color: $mainColor6;
+  }
+
+
+
+  p#error {
+    color:$txt5;
+    font-weight:400;
+  }
+
+}
+
+footer.form-button{
+  box-sizing: border-box;
+
+  button{
+    display:inline-block;
+    background-color:$mainColor1;
+    color:$mainColor3;
+    text-align:center;
+  }
+
+}
+
+section.poll-display{
+      box-sizing: border-box;
+      background-color:$mainColor3;
+      background-image: url("../images/bg_tile1.svg"),url("../images/icon_q.svg");
+      background-repeat:  repeat-y, no-repeat;
+
+      h3 {
+        color:$txt1;
+        font-weight:400;
+      }
+
+      p{
+        color:$txt3;
+
+        span {
+          color:$txt1;
+        }
+
+      }
+
+    table{
+      box-sizing: border-box;
+      border-collapse: collapse;
+      border:1px solid $mainColor1;
+
+        td {
+          vertical-align: middle;
+          color:$txt1;
+          border-bottom:1px solid $mainColor1;
+
+        }
+
+        td.option {
+          padding: 0;
+          border:1px solid $mainColor1;
+        }
+
+        td.result {
+          text-align:right;
+        }
+
+        td.opt1 {
+          background-color:$option1;
+        }
+
+        td.opt2 {
+          background-color:$option2;
+        }
+
+        td.opt3 {
+          background-color:$option3;
+        }
+    }
+
+    div.fake-poll{
+        background-image: url("../images/pieChart.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    button {
+      background-color:$mainColor1;
+      box-sizing: border-box;
+      color: $txt4;
+      text-align: center;
+    }
+
+}
+
+section.poll-comments{
+
+  header{
+    background-color:transparent;
+
+    h2{
+      color:$txt1;
+    }
+  }
+
+  div.comment {
+    box-sizing: border-box;
+    background-color:$mainColor3;
+    background-image: url("../images/bg_tile2.svg");
+    background-repeat: repeat-y;
+
+    background-position: left;
+
+    h3 {
+      color:$txt1;
+    }
+
+    p.time-stamp {
+      color:$txt3;
+    }
+
+    p {
+      color:$txt2;
+    }
+  }
+
+}
+
 footer.main {
   text-align: center;
 
   h3{
     color:$txt2;
+
 
   }
 

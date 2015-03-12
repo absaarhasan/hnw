@@ -2,12 +2,15 @@ $base-font-size: 20px;
 $bfs: $base-font-size;
 
 
+
 //desktop
+
 @media only screen and (min-width : 768px) and (max-width : 1024px){
   html {
     font-size: 16px;
   }
 }
+
 //wide screen desktop
 @media only screen and (min-width : 1025px){
   html {
@@ -77,7 +80,7 @@ header.main {
         padding-top: em(10px, $bfs);
         font-size: em(20px, $bfs);
         color: $txt4;
-        font-weight: 200;
+
 
       }
 
@@ -91,16 +94,35 @@ header.main {
 
 }
 
+section.home{
+  header{
+    background-image: url("../images/icon_home.svg");
+    background-size: em(55px, $bfs) em(45px, $bfs) ;
+    background-position:4% em(15px, $bfs);
+  }
+}
 
+section.login, section.register {
+  header{
+    background-image: url("../images/icon_login.svg");
+    background-size: em(45px, $bfs)  em(47px, $bfs) ;
+    background-position:4% em(15px, $bfs);
+  }
+}
+
+section.poll, section.vote, section.add-poll {
+  header{
+    background-image: url("../images/icon_poll.svg");
+    background-size:  em(52px, $bfs) em(45px, $bfs) ;
+    background-position:4% em(15px, $bfs);
+  }
+}
 
 section.main{
 
   header{
 
-    background-image: url("../images/icon_home.svg");
     background-repeat:no-repeat;
-    background-size: em(55px, $bfs) em(45px, $bfs) ;
-    background-position:4% em(15px, $bfs);
     height: em(80px, $bfs);
 
     h2 {
@@ -108,7 +130,7 @@ section.main{
       margin: em(15px, $bfs) 0 0 12%;
     }
 
-    .filter-menu{
+    .filter-menu, .back-button{
       top:0;
       right:4%;
 
@@ -116,59 +138,35 @@ section.main{
         width:em(280px, $bfs);
         color:$txt4;
         font-size: em(20px, $bfs);
-        padding-right:em(40px, $bfs);
-        background-size: em(25px, $bfs) em(15px, $bfs) ;
-        background-position:right em(5px, $bfs);
+
         top: em(25px, $bfs);
         right: 0;
         text-align:right;
+
+      }
+    }
+
+    .filter-menu {
+      button{
+        padding-right:em(40px, $bfs);
+        background-size: em(25px, $bfs) em(15px, $bfs) ;
+        background-position:right em(5px, $bfs);
+        vertical-align: text-top;
+      }
+    }
+
+    .back-button {
+      button {
+        padding-right:em(30px, $bfs);
+        background-size: em(15px, $bfs) em(25px, $bfs) ;
+        background-position:right em(0px, $bfs);
         vertical-align: text-top;
       }
     }
 
   }
 
-  footer {
 
-
-    padding-top:em(20px, $bfs);
-    height:em(70px, $bfs);
-
-    button {
-
-      width: em(13px, $bfs);
-      height: em(25px, $bfs);
-      background-size: em(13px, $bfs)  em(25px, $bfs) ;
-      background-position:right top;
-      text-indent:-99999px;
-      background-position:right top;
-
-        &#prev{
-          background-image: url("../images/arrow_prev.svg");
-          margin-right:em(15px, $bfs);
-        }
-
-        &#next{
-          background-image: url("../images/arrow_next.svg");
-          margin-left:em(15px, $bfs);
-        }
-    }
-
-    p {
-      display:inline-block;
-      color:$txt2;
-
-
-    }
-
-    span {
-      color:$txt1;
-      font-weight:400;
-
-    }
-
-
-  }
 
 
 
@@ -264,6 +262,301 @@ section.main{
     }
   }
 
+footer.pagination {
+
+
+  padding-top:em(20px, $bfs);
+  height:em(70px, $bfs);
+
+  button {
+
+    width: em(13px, $bfs);
+    height: em(25px, $bfs);
+    background-size: em(13px, $bfs)  em(25px, $bfs) ;
+    background-position:right top;
+    text-indent:-99999px;
+    background-position:right top;
+
+    &#prev{
+      background-image: url("../images/arrow_prev.svg");
+      margin-right:em(15px, $bfs);
+    }
+
+    &#next{
+      background-image: url("../images/arrow_next.svg");
+      margin-left:em(15px, $bfs);
+    }
+  }
+
+  p {
+    display:inline-block;
+    color:$txt2;
+
+  }
+
+  span {
+    color:$txt1;
+    font-weight:400;
+
+  }
+
+}
+
+
+
+.form-row:nth-child(2) {
+  margin-top: em(20px, $bfs);
+
+}
+
+.form-row {
+  padding:em(15px, $bfs) 0 em(20px, $bfs) 12% ;
+
+  h3 {
+    font-size:em(20px, $bfs);
+
+  }
+
+  label{
+    font-size: em(20px, $bfs);
+
+  }
+
+  label.radio{
+    padding-left:em(60px, $bfs);
+    background-size: em(26px, $bfs) em(26px, $bfs);
+  }
+
+
+  input.text{
+    font-size: em(20px, $bfs);
+    margin-top: em(20px, $bfs);
+    width:em(450px, $bfs);
+    height:em(45px, $bfs);
+    padding:em(2px, $bfs) em(5px, $bfs);
+  }
+
+  textarea {
+    padding:em(2px, $bfs) em(5px, $bfs);
+    font-size: em(20px, $bfs);
+    margin-top: em(20px, $bfs);
+    width:em(450px, $bfs);
+    height:em(135px, $bfs);
+  }
+
+  p.count {
+
+    top:em(15px, $bfs);
+    left:12%;
+    width:em(450px, $bfs);
+
+  }
+
+}
+
+.form-row.error{
+
+  background-image:  url("../images/icon_error.svg"), url("../images/bg_tile3.svg");
+  background-repeat:  no-repeat, repeat-y;
+  background-position: em(14px, $bfs) center,left,;
+  background-size: em(11px, $bfs) em(47px, $bfs), em(40px, $bfs) em(40px, $bfs) ;
+
+
+  p#error {
+    font-size: em(18px, $bfs);
+    line-height: em(26px, $bfs);
+    position:absolute;
+    left:65%;
+    top:50%;
+    margin-top:em(-13px, $bfs);
+    max-width:30%;
+  }
+
+}
+
+.form-row span.icon{
+
+  display:inline-block;
+  height:em(50px, $bfs);
+  width:em(50px, $bfs);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  margin-left: 2%;
+  vertical-align: bottom;
+}
+
+.form-row span.correct{
+
+  background-image:  url("../images/icon_tick.svg");
+  background-size: em(42px, $bfs) em(46px, $bfs);
+
+}
+
+.form-row span.incorrect{
+
+  background-image:  url("../images/icon_cross.svg");
+  background-size: em(44px, $bfs) em(37px, $bfs);
+
+}
+
+footer.form-button{
+
+  margin-top:em(25px, $bfs);
+  padding:0 0 em(75px, $bfs) 12%;
+
+  button{
+    font-size: em(20px, $bfs);
+    width:em(225px, $bfs);
+    height:em(50px, $bfs);
+
+  }
+
+
+
+}
+
+section.poll-display{
+    margin-top: em(10px, $bfs);
+    padding-top: em(20px, $bfs);
+    background-size: em(15px, $bfs) em(15px, $bfs),em(58px, $bfs) em(58px, $bfs);
+    background-position: left, 4% em(30px, $bfs);
+    position: relative;
+    min-height:em(600px, $bfs);
+    padding-bottom: em(100px, $bfs);
+
+    h3 {
+      font-size: em(32px, $bfs);
+      line-height: em(48px, $bfs);
+      margin-left: 12%;
+      max-width:48%;
+
+    }
+
+    p.main-result{
+      margin-top: em(20px, $bfs);
+
+      font-size: em(72px, $bfs);
+      margin-left:12%;
+      display:inline-block;
+      max-width:48%;
+      clear:left;
+    }
+
+    table{
+
+      margin:em(25px, $bfs) 0 0 12%;
+      width:44%;
+
+        td {
+          font-size:em(24px, $bfs);
+          padding:em(5px, $bfs) em(10px, $bfs);
+        }
+
+        td.option {
+
+          height:em(50px, $bfs);
+          width:em(50px, $bfs);
+        }
+    }
+
+    div.fake-poll{
+      position:absolute;
+      left:60%;
+      top:em(160px, $bfs);
+      height: em(328px, $bfs);
+      width:40%;
+      background-size: em(328px, $bfs) em(328px, $bfs);
+
+
+    }
+
+    p.total-votes {
+      font-size:em(22px, $bfs);
+      position:absolute;
+      right:4%;
+      bottom:em(35px, $bfs);
+    }
+
+  button {
+    position:absolute;
+    top: em(35px, $bfs);
+    right:4%;
+    width:em(225px, $bfs);
+    height: em(50px, $bfs);
+    font-size:em(20px, $bfs);
+
+  }
+
+    p.author {
+      font-size:em(22px, $bfs);
+      position:absolute;
+      left:12%;
+      bottom: em(70px, $bfs);
+    }
+
+    p.time-stamp {
+      font-size:em(22px, $bfs);
+      position:absolute;
+      left:12%;
+      bottom: em(35px, $bfs);
+    }
+
+}
+
+section.poll-comments{
+
+  header{
+    background-image: url("../images/icon_bubble.svg");
+    background-position: 4% em(15px, $bfs);
+
+    h2{
+
+    }
+  }
+
+  div.comment:nth-child(2){
+    margin-top:0;
+  }
+
+  div.comment {
+    margin-top:em(5px, $bfs);
+    background-size:em(15px, $bfs) em(15px, $bfs);
+    padding-bottom:em(15px, $bfs);
+
+
+    div {
+      margin-right: 4%;
+      padding: 0 10% 0 12%;
+      background-image: url("../images/icon_quote2.svg"), url("../images/icon_quote1.svg");
+      background-repeat: no-repeat;
+      background-size: em(41px, $bfs) em(32px, $bfs), em(41px, $bfs) em(32px, $bfs);
+      background-position: right em(15px, $bfs), 4% em(15px, $bfs) ;
+    }
+
+
+    h3 {
+      display:inline-block;
+      margin: em(20px, $bfs) 0 0 0;
+      font-size:em(20px, $bfs);
+
+
+    }
+
+    p.time-stamp {
+      display:inline-block;
+      font-size:em(20px, $bfs);
+      margin-left:em(10px, $bfs);
+    }
+
+    p.comment {
+
+      font-size:em(20px, $bfs);
+
+      line-height:em(32px, $bfs)
+    }
+  }
+
+}
 footer.main {
 
   height:em(200px, $bfs);

@@ -32,7 +32,22 @@ $(function() {
         showFilterMenu()
     });
 
+    if ( $( "textarea.charCount" ).length ) {
+
+        charCount();
+
+    }
+
+    if ( $( "div.radio-group" ).length ) {
+
+
+        radioGroup();
+
+    }
+
 });
+
+/*------------------------- MENUS ----------------------------- */
 
 function showMobMenu(){
 
@@ -71,3 +86,50 @@ function closeMenu(){
     initButton.removeClass('returnFocus');
 
 }
+
+/*------------------------- CHAR COUNT ----------------------------- */
+
+function charCount(){
+
+    var textBoxes = $( 'textarea.charCount');
+
+    textBoxes.each(function() {
+
+        var textBox = $( this );
+        var countDisplay = textBox.parent('.form-row').find('span#count')
+
+        textBox.keyup(function() {
+
+            var count = textBox.val().length;
+            countDisplay.html(count)
+
+            });
+
+    });
+
+}
+
+/*------------------------- CHAR COUNT ----------------------------- */
+
+function radioGroup() {
+
+
+    var radioGroups = $( 'div.radio-group');
+
+    radioGroups.each(function() {
+
+        var radioGroup = $( this );
+        var labels = radioGroup.find('label');
+
+        radioGroup.on( "click", "label", function() {
+
+            labels.removeClass('checked');
+            $( this).addClass('checked');
+
+        });
+
+    });
+
+}
+
+
