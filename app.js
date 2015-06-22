@@ -1,48 +1,27 @@
 var express = require('express');
+var bodyParser = require('body-parser');
+var cookieParser = require('cookie-parser');
+var session = require('express-session');
+var mongoStore = require('connect-mongo')(session);
+var mongoose = require('mongoose');
+require('./models/users_model.js');
+mongoose.connect('mongodb://localhost:27017/rapd');
+
 var app = express();
 
-app.use(express.static(__dirname + '/public'));
+app.engine('.html', require('ejs').__express);
+app.set('views', __dirname + '/views');
+app.set('view engine', 'html');
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+app.use(cookieParser());
+app.use(session({
+    secret: 'SECRET',
+    cookie: {maxAge: 60*60*1000},
+    store: new mongoStore({ mongooseConnection: mongoose.connection }),
+    resave: true,
+    saveUninitialized: true
+}));
 
-app.get('/', function(req, res) {
-    res.sendFile(__dirname + '/public/index.html');
-});
-
-app.get('/ie', function(req, res) {
-    res.sendFile(__dirname + '/public/please_upgrade.html');
-});
-
-app.get('/research/html', function(req, res) {
-    res.sendFile(__dirname + '/public/html_intro.html');
-});
-
-
-app.get('/research/html/home', function(req, res) {
-    res.sendFile(__dirname + '/public/home.html');
-});
-
-app.get('/research/html/errors', function(req, res) {
-    res.sendFile(__dirname + '/public/errors.html');
-});
-
-app.get('/research/html/login', function(req, res) {
-    res.sendFile(__dirname + '/public/login.html');
-});
-
-app.get('/research/html/register', function(req, res) {
-    res.sendFile(__dirname + '/public/register.html');
-});
-
-app.get('/research/html/addpoll', function(req, res) {
-    res.sendFile(__dirname + '/public/addpoll.html');
-});
-
-app.get('/research/html/vote', function(req, res) {
-    res.sendFile(__dirname + '/public/vote.html');
-});
-
-app.get('/research/html/poll', function(req, res) {
-    res.sendFile(__dirname + '/public/poll.html');
-});
-
-
+require('./routes')(app);
 app.listen(process.env.PORT || 5000);
