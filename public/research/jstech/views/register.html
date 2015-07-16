@@ -1,0 +1,67 @@
+
+<section class="main login" role="main" aria-labelledby="h2-1" tabindex="-1" accesskey="3">
+    <div page-head></div>
+    <div alert-banner></div>
+    <form name="reg" ng-submit="reg.$valid && processForm()" novalidate>
+        <div class="form-row" ng-class="{'error': (reg.$submitted || reg.username.$touched) && !reg.username.$valid}">
+            <label for="username">Username</label>
+            <input id="username" name="username" ng-model="regForm.username" type="text" ng-minlength="3" class="text" required/>
+            <p class="error" ng-show="(reg.$submitted || reg.username.$touched) && reg.username.$invalid">
+                <span ng-show="reg.username.$error.required">Username required!</span>
+                <span ng-show="reg.username.$error.minlength">Min 3 characters!</span>
+            </p>
+            <span class="icon correct" role="presentation" ng-show="reg.username.$dirty && reg.username.$untouched && reg.username.$valid"></span>
+            <span class="icon incorrect" role="presentation" ng-show="reg.username.$dirty && reg.username.$untouched && reg.username.$invalid"></span>
+        </div>
+
+        <div class="form-row" ng-class="{error: (reg.$submitted || reg.email.$touched) && !reg.email.$valid}">
+            <label for="email">Email</label>
+            <input id="email" name="email" ng-model-options="{ updateOn: 'default blur' }" ng-model="regForm.email" type="email" class="text" required/>
+            <p class="error" ng-show="(reg.$submitted || reg.email.$touched) && reg.email.$invalid">
+                <span ng-show="reg.email.$error.required">Email required!</span>
+                <span ng-show="reg.email.$error.email">Invalid email!</span>
+            </p>
+            <span class="icon correct" role="presentation" ng-show="reg.email.$dirty && reg.email.$untouched && reg.email.$valid"></span>
+            <span class="icon incorrect" role="presentation" ng-show="reg.email.$dirty && reg.email.$untouched && reg.email.$invalid"></span>
+        </div>
+
+        <div class="form-row" ng-model-options="{ updateOn: 'default blur' }" ng-class="{error: (reg.$submitted || reg.confirmEmail.$touched) && !reg.confirmEmail.$valid}">
+            <label for="confirm-email">Confirm email</label>
+            <input id="confirm-email" name="confirmEmail" ng-model="regForm.confirmEmail" compare-to="regForm.email" type="email" class="text" required/>
+            <p class="error" ng-show="(reg.$submitted || reg.confirmEmail.$touched) && reg.confirmEmail.$invalid">
+                <span ng-show="reg.confirmEmail.$error.required">Confirmation required!</span>
+                <span ng-show="reg.confirmEmail.$error.email">Invalid email!</span>
+                <span ng-show="reg.confirmEmail.$error.compareTo">Email does not match!</span>
+            </p>
+            <span class="icon correct" role="presentation" ng-show="reg.confirmEmail.$dirty && reg.confirmEmail.$untouched && reg.confirmEmail.$valid"></span>
+            <span class="icon incorrect" role="presentation" ng-show="reg.confirmEmail.$dirty && reg.confirmEmail.$untouched && reg.confirmEmail.$invalid"></span>
+        </div>
+
+        <div class="form-row" ng-class="{error: (reg.$submitted || reg.password.$touched) && !reg.password.$valid}">
+            <label for="password">Password</label>
+            <input id="password" name="password" ng-model="regForm.password" ng-minlength="6" type="password" class="text" required/>
+            <p class="error" ng-show="(reg.$submitted || reg.password.$touched) && reg.password.$invalid">
+                <span ng-show="reg.password.$error.required">Password required! </span>
+                <span ng-show="reg.password.$error.minlength">Min 6 characters! </span>
+            </p>
+            <span class="icon correct" role="presentation" ng-show="reg.password.$dirty && reg.password.$untouched && reg.password.$valid"></span>
+            <span class="icon incorrect" role="presentation" ng-show="reg.password.$dirty && reg.password.$untouched && reg.password.$invalid"></span>
+        </div>
+
+        <div class="form-row" ng-class="{error: (reg.$submitted || reg.confirmPassword.$touched) && !reg.confirmPassword.$valid}">
+            <label for="confirm-password">Confirm password</label>
+            <input id="confirm-password" ng-model="regForm.confirmPassword" compare-to="regForm.password" name="confirmPassword" type="password" class="text" required/>
+            <p class="error" ng-show="(reg.$submitted || reg.confirmPassword.$touched) && reg.confirmPassword.$invalid">
+                <span ng-show="reg.confirmPassword.$error.required">Confirmation required!</span>
+                <span ng-show="reg.confirmPassword.$error.compareTo">Password does not match!</span>
+            </p>
+            <span class="icon correct" role="presentation" ng-show="reg.confirmPassword.$dirty && reg.confirmPassword.$untouched && reg.confirmPassword.$valid"></span>
+            <span class="icon incorrect" role="presentation" ng-show="reg.confirmPassword.$dirty && reg.confirmPassword.$untouched && reg.confirmPassword.$invalid"></span>
+
+        </div>
+
+        <footer class="form-button">
+            <button type="submit">Go</button>
+        </footer>
+    </form>
+</section>

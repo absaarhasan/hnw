@@ -1,0 +1,31 @@
+<section class="main login" role="main" aria-labelledby="h2-1" tabindex="-1" accesskey="3">
+    <div page-head></div>
+    <div alert-banner></div>
+    <form name="login" ng-submit="login.$valid && processForm()" novalidate>
+        <div class="form-row" ng-class="{error: (login.$submitted || login.email.$touched) && !login.email.$valid}">
+        <label for="email">Email</label>
+            <input id="email" name="email" ng-model-options="{ updateOn: 'default blur' }" ng-model="loginForm.email" type="email" class="text" required/>
+            <p class="error" ng-show="(login.$submitted || login.email.$touched) && login.email.$invalid">
+                <span ng-show="login.email.$error.required">Email required!</span>
+                <span ng-show="login.email.$error.email">Invalid email!</span>
+            </p>
+            <span class="icon correct" role="presentation" ng-show="login.email.$dirty && login.email.$untouched && login.email.$valid"></span>
+            <span class="icon incorrect" role="presentation" ng-show="login.email.$dirty && login.email.$untouched && login.email.$invalid"></span>
+    </div>
+
+        <div class="form-row" ng-class="{error: (login.$submitted || login.password.$touched) && !login.password.$valid}">
+        <label for="password">Password</label>
+            <input id="password" name="password" ng-model="loginForm.password" ng-minlength="6" type="password" class="text" required/>
+            <p class="error" ng-show="(login.$submitted || login.password.$touched) && login.password.$invalid">
+                <span ng-show="login.password.$error.required">Password required! </span>
+                <span ng-show="login.password.$error.minlength">Min 6 characters! </span>
+            </p>
+            <span class="icon correct" role="presentation" ng-show="login.password.$dirty && login.password.$untouched && login.password.$valid"></span>
+            <span class="icon incorrect" role="presentation" ng-show="login.password.$dirty && login.password.$untouched && login.password.$invalid"></span>
+    </div>
+
+    <footer class="form-button">
+        <button type="submit">Go</button>
+    </footer>
+    </form>
+</section>

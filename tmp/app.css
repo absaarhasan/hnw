@@ -108,6 +108,17 @@ footer.pagination {
     display: inline-block;
     vertical-align: middle; }
 
+.alert-banner.error {
+  background-color: #fbfb2e; }
+  .alert-banner.error h2 {
+    color: #ff3333;
+    font-weight: 400; }
+.alert-banner.success {
+  background-color: #77bf26; }
+  .alert-banner.success h2 {
+    color: #fff;
+    font-weight: 400; }
+
 .form-row {
   box-sizing: border-box;
   position: relative; }
@@ -152,9 +163,11 @@ footer.pagination {
     border-color: #ff3333; }
   .form-row.error textarea {
     border-color: #ff3333; }
-  .form-row.error p#error {
+  .form-row.error p.error {
     color: #ff3333;
     font-weight: 400; }
+    .form-row.error p.error span {
+      font-weight: inherit; }
 
 footer.form-button {
   box-sizing: border-box; }
@@ -162,7 +175,8 @@ footer.form-button {
     display: inline-block;
     background-color: #77bf26;
     color: #fff;
-    text-align: center; }
+    text-align: center;
+    cursor: pointer; }
 
 section.poll-display {
   box-sizing: border-box;
@@ -442,7 +456,7 @@ footer.main {
       height: 2.08333rem;
       line-height: 2.08333rem; }
 
-  .form-row:nth-child(2) {
+  .form-row:nth-child(1) {
     margin-top: 0.83333rem; }
 
   .form-row {
@@ -474,7 +488,7 @@ footer.main {
       left: 5%;
       width: 90%; }
 
-  .form-row.error p#error {
+  .form-row.error p.error {
     text-align: center;
     margin-top: 0.83333rem;
     padding: 0.41667rem 5% 0.83333rem 5%; }
@@ -731,7 +745,7 @@ footer.main {
       color: #042236;
       font-weight: 400; }
 
-  .form-row:nth-child(2) {
+  .form-row:nth-child(1) {
     margin-top: 1rem; }
 
   .form-row {
@@ -760,12 +774,17 @@ footer.main {
       left: 12%;
       width: 22.5rem; }
 
+  .alert-banner {
+    margin: 1em 4% 0 4%;
+    padding: 1em;
+    text-align: center; }
+
   .form-row.error {
     background-image: url("../images/icon_error.svg"), url("../images/bg_tile3.svg");
     background-repeat: no-repeat, repeat-y;
     background-position: 0.7rem center, left;
     background-size: 0.55rem 2.35rem, 2rem 2rem; }
-    .form-row.error p#error {
+    .form-row.error p.error {
       font-size: 0.9rem;
       line-height: 1.3rem;
       position: absolute;

@@ -5,7 +5,8 @@ module.exports = function(grunt) {
     grunt.config('concat', {
         scripts: {
             src: ['bower_components/jquery/dist/jquery.js',
-                'bower_components/angular/angular.js',
+             /*   'bower_components/angular/angular.js',
+                'bower_components/angular/angular-resource.js',*/
                 'js/jquery.trap.js',
                 'js/main.js'],
             dest: 'tmp/main.js'
@@ -34,7 +35,8 @@ module.exports = function(grunt) {
     grunt.config('cssmin', {
         app: {
             files: {
-                'public/assets/app.css': ['tmp/app.css']
+              //    'public/assets/app.css': ['tmp/app.css'] // static html only
+                'public/assets/app2.css': ['tmp/app.css']
             }
         }
     });

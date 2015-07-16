@@ -317,7 +317,12 @@ footer.pagination {
 
 }
 
-.form-row:nth-child(2) {
+.alert-banner{
+
+
+}
+
+.form-row:nth-child(1) {
   margin-top: em(10px, $bfs);
 
 }
@@ -370,7 +375,7 @@ footer.pagination {
 }
 
 .form-row.error {
-  p#error {
+  p.error {
     text-align:center;
     margin-top:em(10px, $bfs);
     padding:em(5px, $bfs) 5% em(10px, $bfs) 5%;

@@ -5,6 +5,7 @@ var session = require('express-session');
 var mongoStore = require('connect-mongo')(session);
 var mongoose = require('mongoose');
 require('./models/users_model.js');
+require('./models/polls_model.js');
 mongoose.connect('mongodb://localhost:27017/rapd');
 
 var app = express();

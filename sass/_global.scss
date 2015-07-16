@@ -225,6 +225,28 @@ footer.pagination {
   }
 }
 
+.alert-banner{
+
+
+  &.error {
+    background-color:$mainColor4;
+    h2{
+      color:$txt5;
+      font-weight:400;
+    }
+  }
+
+  &.success {
+
+    background-color:$mainColor1;
+    h2{
+      color:$txt4;
+      font-weight:400;
+    }
+  }
+
+}
+
 .form-row {
   box-sizing: border-box;
   position:relative;
@@ -307,9 +329,13 @@ footer.pagination {
 
 
 
-  p#error {
+  p.error {
     color:$txt5;
     font-weight:400;
+
+    span{
+      font-weight:inherit;
+    }
   }
 
 }
@@ -322,6 +348,7 @@ footer.form-button{
     background-color:$mainColor1;
     color:$mainColor3;
     text-align:center;
+    cursor: pointer;
   }
 
 }

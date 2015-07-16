@@ -305,7 +305,7 @@ footer.pagination {
 
 
 
-.form-row:nth-child(2) {
+.form-row:nth-child(1) {
   margin-top: em(20px, $bfs);
 
 }
@@ -355,6 +355,14 @@ footer.pagination {
 
 }
 
+.alert-banner{
+
+  margin:1em 4% 0 4%;
+  padding:1em;
+  text-align:center;
+
+}
+
 .form-row.error{
 
   background-image:  url("../images/icon_error.svg"), url("../images/bg_tile3.svg");
@@ -363,7 +371,7 @@ footer.pagination {
   background-size: em(11px, $bfs) em(47px, $bfs), em(40px, $bfs) em(40px, $bfs) ;
 
 
-  p#error {
+  p.error {
     font-size: em(18px, $bfs);
     line-height: em(26px, $bfs);
     position:absolute;

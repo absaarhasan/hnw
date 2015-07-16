@@ -5,88 +5,59 @@ function hashPW(pwd){
   return crypto.createHash('sha256').update(pwd).
          digest('base64').toString();
 }
-exports.signup = function(req, res){
+
+exports.register = function(req, res){
+
   var user = new User({username:req.body.username});
-  user.set('hashed_password', hashPW(req.body.password));
+  if(req.body.password){
+    user.set('hashed_password', hashPW(req.body.password));
+  }
   user.set('email', req.body.email);
-  user.save(function(err) {
+  user.save(function(err, data) {
     if (err){
-      res.session.error = err;
-      res.redirect('/research/jstech/signup');
+     // res.session.error = err;
+      console.log("Registration Schema Error");
+      console.log(err);
+      res.send(err);
+      res.end();
     } else {
-      req.session.user = user.id;
-      req.session.username = user.username;
-      req.session.msg = 'Authenticated as ' + user.username;
-      res.redirect('/research/jstech/');
+
+      req.session.user = data._id;
+      console.log(req.session.user);
+      req.session.username = data.username;
+  //    req.session.msg = 'Authenticated as ' + user.username;
+      console.log("Registration successful");
+      res.json({ message: 'Registration complete', session: true, username: req.session.username, user: req.session.user });
+      res.end();
     }
   });
 };
+
 exports.login = function(req, res){
-  User.findOne({ username: req.body.username })
+  User.findOne({ email: req.body.email })
   .exec(function(err, user) {
-    if (!user){
-      err = 'User Not Found.';
-    } else if (user.hashed_password === 
-               hashPW(req.body.password.toString())) {
-      req.session.regenerate(function(){
-        req.session.user = user.id;
-        req.session.username = user.username;
-        req.session.msg = 'Authenticated as ' + user.username;
-        res.redirect('/research/jstech/');
-      });
-    }else{
-      err = 'Authentication failed.';
-    }
-    if(err){
-      req.session.regenerate(function(){
-        req.session.msg = err;
-        res.redirect('/research/jstech/login');
-      });
-    }
-  });
-};
-exports.getUserProfile = function(req, res) {
-  User.findOne({ _id: req.session.user })
-  .exec(function(err, user) {
-    if (!user){
-      res.json(404, {err: 'User Not Found.'});
-    } else {
-      res.json(user);
-    }
-  });
-};
-exports.updateUser = function(req, res){
-  User.findOne({ _id: req.session.user })
-  .exec(function(err, user) {
-    user.set('email', req.body.email);
-    user.set('color', req.body.color);
-    user.save(function(err) {
-      if (err){
-        res.sessor.error = err;
-      } else {
-        req.session.msg = 'User Updated.';
-      }
-      res.redirect('/research/jstech/user');
-    });
-  });
-};
-exports.deleteUser = function(req, res){
-  User.findOne({ _id: req.session.user })
-  .exec(function(err, user) {
-    if(user){
-      user.remove(function(err){
         if (err){
-          req.session.msg = err;
+            console.log("Login DB error");
+            console.log(err);
+            res.json({ message: 'Oops ... server error!', session: false});
+            res.end();
+        } else if (!user){
+            console.log("User not found");
+            res.json({ message: 'Email or password are incorrect.', session: false});
+            res.end();
+        } else if (user.hashed_password === hashPW(req.body.password.toString())) {
+            req.session.regenerate(function(){
+                req.session.user = user._id;
+                req.session.username = user.username;
+                res.json({ message: 'Login success!', session: true, username: req.session.username, user: req.session.user });
+                res.end();
+            });
+        } else {
+          console.log("Password incorrect");
+          res.json({ message: 'Email or password are incorrect.', session: false});
+          res.end();
         }
-        req.session.destroy(function(){
-          res.redirect('/research/jstech/login');
-        });
-      });
-    } else{
-      req.session.msg = "User Not Found!";
-      req.session.destroy(function(){
-        res.redirect('/research/jstech/login');
-      });
-    }
   });
 };
+
+
