@@ -6,7 +6,10 @@ var mongoStore = require('connect-mongo')(session);
 var mongoose = require('mongoose');
 require('./models/users_model.js');
 require('./models/polls_model.js');
-mongoose.connect('mongodb://localhost:27017/rapd');
+
+var uristring = process.env.MONGOLAB_URI || 'mongodb://localhost:27017/rapd';
+
+mongoose.connect(uristring);
 
 var app = express();
 
