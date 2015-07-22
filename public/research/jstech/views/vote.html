@@ -1,0 +1,46 @@
+<section class="main add-poll" role="main" aria-labelledby="h2-1" tabindex="-1" accesskey="3">
+    <div page-head></div>
+    <div alert-banner></div>
+    <form name="vote" ng-submit="vote.$valid && processForm()" novalidate>
+
+        <div class="form-row">
+            <h3>{{question}}</h3>
+        </div>
+
+        <div class="form-row radio-group" ng-class="{error: (vote.$submitted || vote.vote.$touched) && !vote.vote.$valid}">
+
+            <div ng-repeat="option in options">
+                <label class="radio" for="{{option.option}}">{{ option.value }}</label>
+                <input id="{{option.option}}" ng-change="setOption(option.option)" type="radio" name="vote" ng-model="voteForm.option" ng-value="option.value" required />
+            </div>
+            <p class="error" ng-show="(vote.$submitted || vote.vote.$touched) && vote.vote.$invalid">
+                <span ng-show="vote.vote.$error.required">Vote required!</span>
+            </p>
+
+        </div>
+
+        <div class="form-row" ng-class="{error: (vote.$submitted || vote.option.$touched) && !vote.option.$valid}">
+            <label for="comments">Add comment</label>
+            <textarea id="comments" name="comment" ng-model="voteForm.comment" ng-maxlength="600" required /></textarea>
+            <p class="count"><span id="count">{{voteForm.comment.length > 0 ? voteForm.comment.length : "0"}}</span> of 600</p>
+            <p class="error" ng-show="(vote.$submitted || vote.comment.$touched) && vote.comment.$invalid">
+                <span ng-show="vote.comment.$error.required">Comment required!</span>
+                <span ng-show="vote.comment.$error.maxlength">Max 600 characters!</span>
+            </p>
+        </div>
+
+
+
+    <footer class="form-button">
+        <button type="submit">Go</button>
+    </footer>
+    </form>
+</section>
+
+
+
+
+
+
+
+

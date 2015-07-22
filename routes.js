@@ -37,11 +37,10 @@ module.exports = function(app) {
     });
 
     app.post('/research/jstech/register', users.register);
-    app.post('/research/jstech/user/delete', users.deleteUser);
     app.post('/research/jstech/login', users.login);
 
-    app.post('/research/jstech/addpoll', poll.addpoll);
-    app.post('/research/jstech/vote', poll.vote);
+    app.post('/research/jstech/addpoll', polls.addpoll , polls.updateUserPolls);
+    app.post('/research/jstech/vote', polls.vote, polls.updateVoteTally, polls.updateUserVotes);
 
 }
 

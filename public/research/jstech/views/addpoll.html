@@ -1,0 +1,72 @@
+<section class="main add-poll" role="main" aria-labelledby="h2-1" tabindex="-1" accesskey="3">
+    <div page-head></div>
+    <div alert-banner></div>
+    <form name="addpoll" ng-submit="addpoll.$valid && processForm()" novalidate>
+
+
+        <div class="form-row" ng-class="{error: (addpoll.$submitted || addpoll.question.$touched) && !addpoll.question.$valid}">
+            <label for="pollquestion">Poll question</label>
+            <textarea id="pollquestion" name="question" ng-model="addPollForm.question" ng-minlength="3" ng-maxlength="600" required /></textarea>
+            <p class="count"><span id="count">{{addPollForm.question.length > 0 ? addPollForm.question.length : "0"}}</span> of 600</p>
+            <p class="error" ng-show="(addpoll.$submitted || addpoll.question.$touched) && addpoll.question.$invalid">
+                <span ng-show="addpoll.question.$error.required">Poll question required!</span>
+                <span ng-show="addpoll.question.$error.minlength">Minimum of 7 characters!</span>
+                <span ng-show="addpoll.question.$error.maxlength">Max of 600 characters!</span>
+            </p>
+        </div>
+
+        <div class="form-row" ng-class="{error: (addpoll.$submitted || addpoll.option1.$touched) && !addpoll.option1.$valid}">
+            <label for="option1">Option 1</label>
+            <input id="option1" type="text" class="text" name="option1" ng-blur="shuffleOptions()" ng-model="addPollForm.option1" ng-maxlength="100" required />
+            <p class="error" ng-show="(addpoll.$submitted || addpoll.option1.$touched) && addpoll.option1.$invalid">
+                <span ng-show="addpoll.option1.$error.required">Poll question required!</span>
+                <span ng-show="addpoll.option1.$error.maxlength">Max of 100 characters!</span>
+            </p>
+        </div>
+
+        <div class="form-row" ng-class="{error: (addpoll.$submitted || addpoll.option2.$touched) && !addpoll.option2.$valid}">
+            <label for="option2">Option 2</label>
+            <input id="option2" type="text" class="text" name="option2" ng-blur="shuffleOptions()" ng-model="addPollForm.option2" ng-maxlength="100" required />
+            <p class="error" ng-show="(addpoll.$submitted || addpoll.option2.$touched) && addpoll.option2.$invalid">
+                <span ng-show="addpoll.option2.$error.required">Poll question required!</span>
+                <span ng-show="addpoll.option2.$error.maxlength">Max of 100 characters!</span>
+            </p>
+        </div>
+
+        <div class="form-row" ng-class="{error: (addpoll.$submitted || addpoll.option3.$touched) && !addpoll.option3.$valid}">
+            <label for="option3">Option 3 <span>(optional)</span></label>
+            <input id="option3" type="text" class="text" name="option3" ng-blur="shuffleOptions()" ng-model="addPollForm.option3" ng-maxlength="100" />
+            <p class="error" ng-show="(addpoll.$submitted || addpoll.option3.$touched) && addpoll.option3.$invalid">
+                <span ng-show="addpoll.option3.$error.maxlength">Max of 100 characters!</span>
+            </p>
+        </div>
+
+        <div class="form-row" ng-class="{error: (addpoll.$submitted || addpoll.option4.$touched) && !addpoll.option4.$valid}">
+            <label for="option4">Option 4 <span>(optional)</span></label>
+            <input id="option4" type="text" class="text" name="option4" ng-blur="shuffleOptions()" ng-model="addPollForm.option4" ng-maxlength="100" />
+            <p class="error" ng-show="(addpoll.$submitted || addpoll.option4.$touched) && addpoll.option4.$invalid">
+                <span ng-show="addpoll.option4.$error.maxlength">Max of 100 characters!</span>
+            </p>
+        </div>
+
+        <div class="form-row" ng-class="{error: (addpoll.$submitted || addpoll.option5.$touched) && !addpoll.option5.$valid}">
+            <label for="option5">Option 5 <span>(optional)</span></label>
+            <input id="option5" type="text" class="text" name="option5" ng-blur="shuffleOptions()" ng-model="addPollForm.option5" ng-maxlength="100" />
+            <p class="error" ng-show="(addpoll.$submitted || addpoll.option5.$touched) && addpoll.option5.$invalid">
+                <span ng-show="addpoll.option5.$error.maxlength">Max of 100 characters!</span>
+            </p>
+        </div>
+
+        <input type="hidden" ng-model="addPollForm.total" />
+
+    <footer class="form-button">
+        <button type="submit">Go</button>
+    </footer>
+    </form>
+</section>
+
+
+
+
+
+

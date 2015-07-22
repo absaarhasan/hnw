@@ -26,14 +26,14 @@ var TallySchema = new Schema({
     option3: { type: Number },
     option4: { type: Number },
     option5: { type: Number },
-    total: { type: Number }
+    total: { type: Number, index: true}
 });
 
 // Subdocument schema for votes
 var VotesSchema = new Schema({
     user: { type: String, required: 'User ID required'  },
     username: { type: String, required: 'Username required'},
-    vote: { type: Number, required: 'Vote required'  },
+    vote: { type: String, required: 'Vote required'  },
     comment: { type: String, required: 'Comment required'  },
     posted: { type: Date }
 
@@ -44,7 +44,7 @@ var VotesSchema = new Schema({
 var PollsSchema = new Schema({
     question: { type: String, required: 'Poll question required' },
     author: [AuthorSchema],
-    posted: { type: Date },
+    posted: { type: Date , index: true , default: Date.now},
     options: [OptionsSchema],
     tally: [TallySchema],
     votes: [VotesSchema]
@@ -60,4 +60,4 @@ exports.PollSchema = new mongoose.Schema({
 
 */
 
-mongoose.model('poll', PollsSchema);
+mongoose.model('Poll', PollsSchema);

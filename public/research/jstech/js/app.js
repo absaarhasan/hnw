@@ -44,6 +44,36 @@ var app = angular.module('hnw', ['ui.router'])
             templateUrl: "views/success.html",
             controller: RegSuccessCtrl
         })
+        .state('addpoll', {
+            url: "/addpoll",
+            parent: 'main',
+            templateUrl: "views/addpoll.html",
+            controller: AddPollCtrl
+        })
+        .state('addpoll.success', {
+            url: "/addpoll/success/:pollid",
+            parent: 'main',
+            templateUrl: "views/success.html",
+            controller: AddPollSuccessCtrl
+        })
+        .state('vote', {
+            url: "/vote/:pollid/:question/:option1/:option2/:option3/:option4/:option5",
+            parent: 'main',
+            templateUrl: "views/vote.html",
+            controller: VoteCtrl
+        })
+        .state('vote.success', {
+            url: "/vote/success/:pollid",
+            parent: 'main',
+            templateUrl: "views/success.html",
+            controller: VoteSuccessCtrl
+        })
+        .state('poll', {
+            url: "/poll/:pollid",
+            parent: 'main',
+            templateUrl: "views/poll.html",
+            controller: PollCtrl
+        })
 
 
     })
