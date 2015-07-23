@@ -259,20 +259,20 @@ footer.main {
   height: 100%;
   display: none; }
 
-@media only screen and (max-width: 50em) {
+@media only screen and (max-width: 768px) {
   /* Define mobile styles */
   /* max-width 640px, mobile-only styles, use when QAing mobile issues */
   /* min-width 641px, medium screens */ }
-@media only screen and (max-width: 50em) {
+@media only screen and (max-width: 768px) {
   html {
     font-size: 12px; } }
-@media only screen and (max-width: 50em) and (max-width: 40em) {
+@media only screen and (max-width: 768px) and (max-width: 40em) {
   html {
     font-size: 14px; } }
-@media only screen and (max-width: 50em) and (min-width: 40.063em) {
+@media only screen and (max-width: 768px) and (min-width: 40.063em) {
   html {
     font-size: 16px; } }
-@media only screen and (max-width: 50em) {
+@media only screen and (max-width: 768px) {
   .full {
     display: none; }
 
@@ -580,11 +580,11 @@ footer.main {
       font-size: 1rem;
       padding: 0 0.41667rem;
       margin-top: 0.41667rem; } }
-  @media only screen and (max-width: 50em) and (max-width: 449px) {
+  @media only screen and (max-width: 768px) and (max-width: 449px) {
     footer.main ul:last-child li:last-child {
       border-left: 0; } }
 
-@media only screen and (min-width: 50.063em) {
+@media only screen and (min-width: 769px) {
   /* Define mobile styles */
   /* max-width 640px, mobile-only styles, use when QAing mobile issues */
   /* min-width 641px, medium screens */
@@ -596,40 +596,40 @@ footer.main {
   /* min-width 1921px, xxlarge screens */
   /* min-width 1921px, xxlarge screens */
   /* min-width 1921px, xxlarge screens */ }
-@media only screen and (min-width: 50.063em) {
+@media only screen and (min-width: 769px) {
   body {
     font-size: 16px; } }
-@media only screen and (min-width: 50.063em) and (max-width: 40em) {
+@media only screen and (min-width: 769px) and (max-width: 40em) {
   body {
     font-size: 16px; } }
-@media only screen and (min-width: 50.063em) and (min-width: 40.063em) {
+@media only screen and (min-width: 769px) and (min-width: 40.063em) {
   html {
     font-size: 16px; } }
-@media only screen and (min-width: 50.063em) and (min-width: 40.063em) and (max-width: 64em) {
+@media only screen and (min-width: 769px) and (min-width: 40.063em) and (max-width: 64em) {
   html {
     font-size: 16px; } }
-@media only screen and (min-width: 50.063em) and (min-width: 64.063em) {
+@media only screen and (min-width: 769px) and (min-width: 64.063em) {
   html {
     font-size: 18px; } }
-@media only screen and (min-width: 50.063em) and (min-width: 64.063em) and (max-width: 90em) {
+@media only screen and (min-width: 769px) and (min-width: 64.063em) and (max-width: 90em) {
   html {
     font-size: 18px; } }
-@media only screen and (min-width: 50.063em) and (min-width: 90.063em) {
+@media only screen and (min-width: 769px) and (min-width: 90.063em) {
   html {
     font-size: 20px; } }
-@media only screen and (min-width: 50.063em) and (min-width: 90.063em) and (max-width: 120em) {
+@media only screen and (min-width: 769px) and (min-width: 90.063em) and (max-width: 120em) {
   html {
     font-size: 22px; } }
-@media only screen and (min-width: 50.063em) and (min-width: 120.063em) {
+@media only screen and (min-width: 769px) and (min-width: 120.063em) {
   html {
     font-size: 24px; } }
-@media only screen and (min-width: 50.063em) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 50.063em) and (min--moz-device-pixel-ratio: 2), only screen and (min-width: 50.063em) and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-width: 50.063em) and (min-device-pixel-ratio: 2), only screen and (min-width: 50.063em) and (min-resolution: 192dpi), only screen and (min-width: 50.063em) and (min-resolution: 2dppx) {
+@media only screen and (min-width: 769px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 769px) and (min--moz-device-pixel-ratio: 2), only screen and (min-width: 769px) and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-width: 769px) and (min-device-pixel-ratio: 2), only screen and (min-width: 769px) and (min-resolution: 192dpi), only screen and (min-width: 769px) and (min-resolution: 2dppx) {
   html {
     font-size: 24px; } }
-@media only screen and (min-width: 50.063em) and (min-width: 1600px) and (max-width: 2560px) {
+@media only screen and (min-width: 769px) and (min-width: 1600px) and (max-width: 2560px) {
   html {
     font-size: 36px; } }
-@media only screen and (min-width: 50.063em) {
+@media only screen and (min-width: 769px) {
   /*
   //desktop
   
