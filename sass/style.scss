@@ -39,14 +39,14 @@ $screen: "only screen"; /* Define mobile styles */
 
 // Mobile
 
-@media  #{$screen} and (-webkit-max-device-pixel-ratio: 1.24) and (max-width: 49.9em),
-#{$screen} and (max-resolution: 119dpi) and (max-width: 49.9em),
-#{$screen} and (-webkit-min-device-pixel-ratio: 1.25) and (max-width: 79.9em),
-#{$screen} and (min-resolution: 120dpi) and (max-width: 79.9em),
-#{$screen} and (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 139.9em),
-#{$screen} and (min-resolution: 144dpi) and (max-width: 139.9em),
-#{$screen} and (-webkit-min-device-pixel-ratio: 2) and (max-width: 199.9em),
-#{$screen} and (min-resolution: 192dpi) and (max-width: 199.9em)
+@media  #{$screen} and (-webkit-max-device-pixel-ratio: 1.24) and (max-width: 999px),
+#{$screen} and (max-resolution: 119dpi) and (max-width: 999px),
+#{$screen} and (-webkit-min-device-pixel-ratio: 1.25) and (max-width: 1249px),
+#{$screen} and (min-resolution: 120dpi) and (max-width: 1249px),
+#{$screen} and (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 1399px),
+#{$screen} and (min-resolution: 144dpi) and (max-width: 1399px),
+#{$screen} and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1799px),
+#{$screen} and (min-resolution: 192dpi) and (max-width: 1799px)
 {
 
   @import 'mob';
@@ -94,14 +94,14 @@ $screen: "only screen"; /* Define mobile styles */
 
 // Desktop
 
-@media  #{$screen} and (-webkit-max-device-pixel-ratio: 1.24) and (min-width: 50em),
-        #{$screen} and (max-resolution: 119dpi) and (min-width: 50em),
-        #{$screen} and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 80em),
-        #{$screen} and (min-resolution: 120dpi) and (min-width: 80em),
-        #{$screen} and (-webkit-min-device-pixel-ratio: 1.5) and (min-width: 140em),
-        #{$screen} and (min-resolution: 144dpi) and (min-width: 140em),
-        #{$screen} and (-webkit-min-device-pixel-ratio: 2) and (min-width: 200em),
-        #{$screen} and (min-resolution: 192dpi) and (min-width: 200em)
+@media  #{$screen} and (-webkit-max-device-pixel-ratio: 1.24) and (min-width: 1000px),
+        #{$screen} and (max-resolution: 119dpi) and (min-width: 1000px),
+        #{$screen} and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 1250px),
+        #{$screen} and (min-resolution: 120dpi) and (min-width: 1250px),
+        #{$screen} and (-webkit-min-device-pixel-ratio: 1.5) and (min-width: 1400px),
+        #{$screen} and (min-resolution: 144dpi) and (min-width: 1400px),
+        #{$screen} and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1800px),
+        #{$screen} and (min-resolution: 192dpi) and (min-width: 1800px)
         {
 
           @import 'full';
