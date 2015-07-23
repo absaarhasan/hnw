@@ -13,7 +13,7 @@ $mediumMin: "(min-width: 40.063em)";  /* min-width 641px, medium screens */
 // Small screens
 @media #{$screen} {
 
-  html{font-size:12px;}
+  html{font-size:14px;}
 
 }
 
@@ -21,7 +21,7 @@ $mediumMin: "(min-width: 40.063em)";  /* min-width 641px, medium screens */
 
 @media #{$screen} and #{$smallMax} {
 
-  html{font-size:14px;}
+  html{font-size:16px;}
 
 }
 
@@ -30,7 +30,7 @@ $mediumMin: "(min-width: 40.063em)";  /* min-width 641px, medium screens */
 // Medium screens
 @media #{$screen} and #{$mediumMin} {
 
-  html{font-size:16px;}
+  html{font-size:18px;}
 }
 
 
