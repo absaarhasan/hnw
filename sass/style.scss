@@ -43,10 +43,10 @@ $screen: "only screen"; /* Define mobile styles */
 #{$screen} and (max-resolution: 119dpi) and (max-width: 49.9em),
 #{$screen} and (-webkit-min-device-pixel-ratio: 1.25) and (max-width: 64.9em),
 #{$screen} and (min-resolution: 120dpi) and (max-width: 64.9em),
-#{$screen} and (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 74.9em),
-#{$screen} and (min-resolution: 144dpi) and (max-width: 74.9em),
-#{$screen} and (-webkit-min-device-pixel-ratio: 2) and (max-width: 89.9em),
-#{$screen} and (min-resolution: 192dpi) and (max-width: 89.9em)
+#{$screen} and (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 79.9em),
+#{$screen} and (min-resolution: 144dpi) and (max-width: 79.9em),
+#{$screen} and (-webkit-min-device-pixel-ratio: 2) and (max-width: 94.9em),
+#{$screen} and (min-resolution: 192dpi) and (max-width: 94.9em)
 {
 
   @import 'mob';
@@ -98,10 +98,10 @@ $screen: "only screen"; /* Define mobile styles */
         #{$screen} and (max-resolution: 119dpi) and (min-width: 50em),
         #{$screen} and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 65em),
         #{$screen} and (min-resolution: 120dpi) and (min-width: 65em),
-        #{$screen} and (-webkit-min-device-pixel-ratio: 1.5) and (min-width: 75em),
-        #{$screen} and (min-resolution: 144dpi) and (min-width: 75em),
-        #{$screen} and (-webkit-min-device-pixel-ratio: 2) and (min-width: 90em),
-        #{$screen} and (min-resolution: 192dpi) and (min-width: 90em)
+        #{$screen} and (-webkit-min-device-pixel-ratio: 1.5) and (min-width: 80em),
+        #{$screen} and (min-resolution: 144dpi) and (min-width: 80em),
+        #{$screen} and (-webkit-min-device-pixel-ratio: 2) and (min-width: 95em),
+        #{$screen} and (min-resolution: 192dpi) and (min-width: 95em)
         {
 
           @import 'full';
