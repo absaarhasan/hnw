@@ -9408,55 +9408,41 @@ IS" AND ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED.
 })( jQuery );
 
 
-$(function() {
+function jqueryInit() {
 
-    $('body').keyup(function(event){
+    $('body').keyup(function (event) {
 
-        if(event.which == 27){
+        if (event.which == 27) {
             closeMenu();
         }
     });
 
-    $('body').on( 'mouseenter', "div#overlay", function() {
+    $('body').on('mouseenter', "div#overlay", function () {
         closeMenu();
     });
 
-    $( "nav.mob").find('button').keyup(function(event) {
+    $("nav.mob").find('button').keyup(function (event) {
         if (event.which == 13) {
             showMobMenu()
         }
     });
 
-    $( "nav.mob" ).on( "click", "button", function() {
+    $("nav.mob").on("click", "button", function () {
         showMobMenu()
     });
 
-    $( "div.filter-menu" ).find('button').keyup(function(event) {
+    $("div.filter-menu").find('button').keyup(function (event) {
         if (event.which == 13) {
             showMobMenu()
         }
     });
 
-    $( "div.filter-menu" ).on( "click", "button", function() {
+    $("div.filter-menu").on("click", "button", function () {
         showFilterMenu()
     });
 
-    if ( $( "textarea.charCount" ).length ) {
 
-        charCount();
-
-    }
-
-    if ( $( "div.radio-group" ).length ) {
-
-
-        radioGroup();
-
-    }
-
-    dummyLink();
-
-});
+}
 
 /*------------------------- MENUS ----------------------------- */
 
@@ -9498,29 +9484,9 @@ function closeMenu(){
 
 }
 
-/*------------------------- CHAR COUNT ----------------------------- */
 
-function charCount(){
 
-    var textBoxes = $( 'textarea.charCount');
-
-    textBoxes.each(function() {
-
-        var textBox = $( this );
-        var countDisplay = textBox.parent('.form-row').find('span#count')
-
-        textBox.keyup(function() {
-
-            var count = textBox.val().length;
-            countDisplay.html(count)
-
-            });
-
-    });
-
-}
-
-/*------------------------- CHAR COUNT ----------------------------- */
+/*------------------------- Radio Group ----------------------------- */
 
 function radioGroup() {
 
@@ -9543,25 +9509,7 @@ function radioGroup() {
 
 }
 
-/*------------------------- DUMMY LINK ----------------------------- */
 
-function dummyLink() {
-
-
-    $( "header.main" ).on( "click", "h1", function() {
-
-        var nextLink = $(this).find('a').attr('href');
-
-        window.location.href=nextLink;
-
-    });
-
-
-
-
-
-
-}
 
 
 /*------------------------- ANGULAR ----------------------------- */

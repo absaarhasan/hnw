@@ -1,7 +1,7 @@
 
 
 // Controller for main abstract template
-function mainCtrl($scope, $http, $state, $stateParams, $rootScope) {
+function mainCtrl($scope, $http, $state, $stateParams, $rootScope, $timeout) {
 
     $scope.session = false;
     $scope.username = '';
@@ -62,6 +62,12 @@ function mainCtrl($scope, $http, $state, $stateParams, $rootScope) {
         }
 
     });
+
+    $timeout(function() {
+        jqueryInit();
+    },0);
+
+
 }
 
 // Controller for the registration page

@@ -1,53 +1,48 @@
 $base-font-size: 12px;
 $bfs: $base-font-size;
 
+$screen: "only screen"; /* Define mobile styles */
 
-@media only screen and (max-width : 320px){
-  html {
-    font-size: $base-font-size;
-  }
-}
+$retina: "(-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1),(min-device-pixel-ratio: 2),(min-resolution: 192dpi),(min-resolution: 2dppx)";
 
-@media only screen and (min-width : 321px){
-  html {
-    font-size: 14px;
-  }
-}
+$smallMax:"(max-width: 40em)"; /* max-width 640px, mobile-only styles, use when QAing mobile issues */
 
-@media only screen and (min-width : 400px){
-  html {
-    font-size: 16px;
-  }
-}
+$mediumMin: "(min-width: 40.063em)";  /* min-width 641px, medium screens */
 
 
-//high res devices
-@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3),only screen and (min-resolution: 1.3dppx), only screen and (min-resolution: 124dpi){
-  html {
-    font-size: 14px;
-  }
-}
+// Small screens
+@media #{$screen} {
 
-@media only screen and (max-device-width : 319px) and (-webkit-min-device-pixel-ratio: 1.3), only screen and (max-device-width : 319px) and (min--moz-device-pixel-ratio: 1.3), only screen and (max-device-width : 319px) and (min-resolution: 1.3dppx), only screen and (max-device-width : 319px) and (min-resolution: 124dpi) {
-  html {
-    font-size: 10px;
-  }
-}
-
-
-@media only screen and (max-device-width : 399px) and (-webkit-min-device-pixel-ratio: 3), only screen and (min--moz-device-pixel-ratio: 3),only screen and (min-resolution: 3dppx), only screen and (min-resolution: 288dpi){
-  html {
-    font-size: 14px;
-  }
+  html{font-size:12px;}
 
 }
 
-@media only screen and (-webkit-min-device-pixel-ratio: 3),only screen and (min--moz-device-pixel-ratio: 3),only screen and (min-resolution: 3dppx), only screen and (min-resolution: 288dpi){
-  html {
-    font-size: 16px;
-  }
+// Small screens only
+
+@media #{$screen} and #{$smallMax} {
+
+  html{font-size:14px;}
 
 }
+
+
+
+// Medium screens
+@media #{$screen} and #{$mediumMin} {
+
+  html{font-size:16px;}
+}
+
+
+
+
+
+// Retina
+@media #{$screen} and #{$retina}{
+ // html{font-size:18px;}
+}
+
+
 
 .full{
   display:none;
@@ -275,7 +270,7 @@ section.main{
 
     font-weight:400;
     line-height: em(19px, $bfs);
-
+    font-size: em(12px, $bfs);
     span{
       font-weight:400;
     }
@@ -286,6 +281,7 @@ section.main{
     margin-left: 15%;
     padding-bottom:15px;
     line-height: em(19px, $bfs);
+    font-size: em(12px, $bfs);
   }
 
   button {
@@ -369,7 +365,20 @@ footer.pagination {
     top:em(15px, $bfs);
     left:5%;
     width:90%;
+    font-size: em(14px, $bfs);
+  }
 
+}
+
+.alert-banner{
+
+  margin:1rem 5% 0 5%;
+  padding:1rem;
+  text-align:center;
+
+
+  h2{
+    font-size:em(14px, $bfs);
   }
 
 }

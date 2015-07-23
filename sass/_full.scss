@@ -1,8 +1,99 @@
 $base-font-size: 20px;
 $bfs: $base-font-size;
 
+$screen: "only screen"; /* Define mobile styles */
+
+$smallMax:"(max-width: 40em)"; /* max-width 640px, mobile-only styles, use when QAing mobile issues */
+
+$retina: "(-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1),(min-device-pixel-ratio: 2),(min-resolution: 192dpi),(min-resolution: 2dppx)";
+
+$mediumMin: "(min-width: 40.063em)";  /* min-width 641px, medium screens */
+
+$mediumMax: "(max-width: 64em)"; /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
+
+$largeMin:"(min-width: 64.063em)"; /* min-width 1025px, large screens */
+
+$largeMax: "(max-width: 90em)"; /* min-width 1025px and max-width 1440px, use when QAing large screen-only issues */
+
+$xLargeMin: "(min-width: 90.063em)"; /* min-width 1441px, xlarge screens */
+
+$xLargeMax: "(max-width: 120em)"; /* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
+
+$xxLargeMin: "(min-width: 120.063em)"; /* min-width 1921px, xxlarge screens */
+
+$xxLargeMin: "(min-width: 120.063em)"; /* min-width 1921px, xxlarge screens */
+
+$xxLargeMax: "(max-width: 2560px)"; /* min-width 1921px, xxlarge screens */
 
 
+// Small screens
+@media #{$screen} {
+
+  body{font-size:16px;}
+
+}
+
+// Small screens only
+
+@media #{$screen} and #{$smallMax} {
+
+  body{font-size:16px;}
+
+}
+
+// Medium screens
+@media #{$screen} and #{$mediumMin} {
+
+  html{font-size:16px;}
+}
+
+// Medium screens only
+
+@media #{$screen} and #{$mediumMin} and #{$mediumMax} {
+
+  html{font-size:16px;}
+
+}
+
+// Large screens
+@media #{$screen} and #{$largeMin} {
+  html{font-size:18px;}
+}
+
+// Large screens only
+
+@media #{$screen} and #{$largeMin} and #{$largeMax} {
+  html{font-size:18px;}
+}
+
+// XLarge screens
+@media #{$screen} and #{$xLargeMin} {
+  html{font-size:20px;}
+}
+
+// XLarge screens only
+
+@media #{$screen} and #{$xLargeMin} and #{$xLargeMax} {
+  html{font-size:22px;}
+}
+
+// XXLarge screens
+@media #{$screen} and #{$xxLargeMin} {
+  html{font-size:24px;}
+}
+
+// Retina
+@media #{$screen} and #{$retina}{
+  html{font-size:24px;}
+}
+
+// kindle fire hd
+
+
+@media #{$screen} and (min-width: 1600px) and (max-width: 2560px){
+  html{font-size:36px;}
+}
+/*
 //desktop
 
 @media only screen and (min-width : 768px) and (max-width : 1023px){
@@ -35,7 +126,7 @@ $bfs: $base-font-size;
 
 }
 
-
+*/
 
 .mob {
   display:none;
@@ -241,6 +332,7 @@ section.main{
       display:inline-block;
       margin-right: em(10px, $bfs);
       height:em(55px, $bfs);
+      font-size: em(20px, $bfs);
 
     }
 
@@ -250,6 +342,7 @@ section.main{
       right: 12%;
       top: 50%;
       margin-top: em(-13px, $bfs);
+      font-size: em(20px, $bfs);
     }
 
 
@@ -292,6 +385,7 @@ footer.pagination {
   p {
     display:inline-block;
     color:$txt2;
+    font-size: em(20px, $bfs);
 
   }
 
@@ -350,16 +444,24 @@ footer.pagination {
     top:em(15px, $bfs);
     left:12%;
     width:em(450px, $bfs);
-
+    font-size: em(20px, $bfs);
   }
 
 }
 
 .alert-banner{
 
-  margin:1em 4% 0 4%;
-  padding:1em;
+  margin:1rem 4% 0 4%;
+  padding:1rem;
   text-align:center;
+  background-image:  url("../images/icon_error.svg"), url("../images/bg_tile3.svg");
+  background-repeat:  no-repeat, repeat-y;
+  background-position: em(17px, $bfs) center,left,;
+  background-size: em(8px, $bfs) em(27px, $bfs), em(40px, $bfs) em(40px, $bfs) ;
+
+  h2{
+    font-size:em(24px, $bfs);
+  }
 
 }
 
