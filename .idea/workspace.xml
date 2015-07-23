@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad697854-b034-4e55-b6a1-539b86226676" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/294076dc8abfe89e0821c7b29d8c55e515dc1e72/_mob.scssc" afterPath="$PROJECT_DIR$/.sass-cache/294076dc8abfe89e0821c7b29d8c55e515dc1e72/_mob.scssc" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/journal/j._0" afterPath="$PROJECT_DIR$/data/journal/j._0" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/journal/lsn" afterPath="$PROJECT_DIR$/data/journal/lsn" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/rapd.0" afterPath="$PROJECT_DIR$/data/rapd.0" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/rapd.ns" afterPath="$PROJECT_DIR$/data/rapd.ns" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/294076dc8abfe89e0821c7b29d8c55e515dc1e72/style.scssc" afterPath="$PROJECT_DIR$/.sass-cache/294076dc8abfe89e0821c7b29d8c55e515dc1e72/style.scssc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass/_full.scss" afterPath="$PROJECT_DIR$/sass/_full.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass/_mob.scss" afterPath="$PROJECT_DIR$/sass/_mob.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/app.css.map" afterPath="$PROJECT_DIR$/tmp/app.css.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/app.css" afterPath="$PROJECT_DIR$/tmp/app.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/app2.css" afterPath="$PROJECT_DIR$/public/assets/app2.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass/style.scss" afterPath="$PROJECT_DIR$/sass/style.scss" />
@@ -45,11 +46,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.scss" pinned="false" current-in-tab="false">
+      <file leaf-file-name="style.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sass/style.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="255">
-              <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.6536697" vertical-offset="0" max-vertical-offset="872">
+              <caret line="38" column="37" selection-start-line="38" selection-start-column="37" selection-end-line="38" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -58,18 +59,18 @@
       <file leaf-file-name="_global.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sass/_global.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.75" vertical-offset="15" max-vertical-offset="7560">
-              <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+            <state vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="7560">
+              <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_full.scss" pinned="false" current-in-tab="true">
+      <file leaf-file-name="_full.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sass/_full.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.6666666" vertical-offset="315" max-vertical-offset="10650">
-              <caret line="85" column="32" selection-start-line="85" selection-start-column="18" selection-end-line="85" selection-end-column="32" />
+            <state vertical-scroll-proportion="10.0" vertical-offset="585" max-vertical-offset="10620">
+              <caret line="5" column="102" selection-start-line="5" selection-start-column="102" selection-end-line="5" selection-end-column="102" />
               <folding />
             </state>
           </provider>
@@ -78,8 +79,8 @@
       <file leaf-file-name="_mob.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sass/_mob.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.4117646" vertical-offset="0" max-vertical-offset="8295">
-              <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+            <state vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="8265">
+              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -202,8 +203,8 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="62" />
-    <option name="y" value="188" />
+    <option name="x" value="138" />
+    <option name="y" value="194" />
     <option name="width" value="1880" />
     <option name="height" value="1270" />
   </component>
@@ -453,11 +454,11 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="62" y="188" width="1880" height="1270" extended-state="0" />
+    <frame x="138" y="194" width="1880" height="1270" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294643" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.44397283" sideWeight="0.4996299" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2156197" sideWeight="0.4996299" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32712552" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852292" sideWeight="0.5003701" order="9" side_tool="true" content_ui="tabs" />
@@ -881,34 +882,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sass/style.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="255">
-          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sass/_global.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.75" vertical-offset="15" max-vertical-offset="7560">
-          <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sass/_mob.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.4117646" vertical-offset="0" max-vertical-offset="8295">
-          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+        <state vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="8265">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sass/_full.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.6666666" vertical-offset="315" max-vertical-offset="10650">
-          <caret line="85" column="32" selection-start-line="85" selection-start-column="18" selection-end-line="85" selection-end-column="32" />
+        <state vertical-scroll-proportion="10.0" vertical-offset="585" max-vertical-offset="10620">
+          <caret line="5" column="102" selection-start-line="5" selection-start-column="102" selection-end-line="5" selection-end-column="102" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sass/_global.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="7560">
+          <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sass/style.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6536697" vertical-offset="0" max-vertical-offset="872">
+          <caret line="38" column="37" selection-start-line="38" selection-start-column="37" selection-end-line="38" selection-end-column="37" />
           <folding />
         </state>
       </provider>
