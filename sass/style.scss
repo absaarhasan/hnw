@@ -1,4 +1,4 @@
-@import 'global';
+
 
 
 $lowRes: "(-webkit-max-device-pixel-ratio: 1.24), (max-resolution: 119dpi)";
@@ -9,34 +9,147 @@ $highRes: "(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)";
 
 $retina: "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)";
 
+$screen: "only screen"; /* Define mobile styles */
 
-//low res
 
-@media only screen and (max-width: 50em) and ($lowRes){
+//$smallMax:"(max-width: 40em)"; /* max-width 640px, mobile-only styles, use when QAing mobile issues */
+
+//$mediumMin: "(min-width: 40.063em)";  /* min-width 641px, medium screens */
+
+//$mediumMax: "(max-width: 64em)"; /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
+
+//$largeMin:"(min-width: 64.063em)"; /* min-width 1025px, large screens */
+
+//$largeMax: "(max-width: 90em)"; /* min-width 1025px and max-width 1440px, use when QAing large screen-only issues */
+
+//$xLargeMin: "(min-width: 90.063em)"; /* min-width 1441px, xlarge screens */
+
+//$xLargeMax: "(max-width: 120em)"; /* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
+
+//$xxLargeMin: "(min-width: 120.063em)"; /* min-width 1921px, xxlarge screens */
+
+//$xxLargeMin: "(min-width: 120.063em)"; /* min-width 1921px, xxlarge screens */
+
+//$xxLargeMax: "(max-width: 2560px)"; /* min-width 1921px, xxlarge screens */
+
+
+@import 'global';
+
+
+
+// Mobile
+
+@media  #{$screen} and (-webkit-max-device-pixel-ratio: 1.24) and (max-width: 49.9em),
+#{$screen} and (max-resolution: 119dpi) and (max-width: 49.9em),
+#{$screen} and (-webkit-min-device-pixel-ratio: 1.25) and (max-width: 64.9em),
+#{$screen} and (min-resolution: 120dpi) and (max-width: 64.9em),
+#{$screen} and (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 74.9em),
+#{$screen} and (min-resolution: 144dpi) and (max-width: 74.9em),
+#{$screen} and (-webkit-min-device-pixel-ratio: 2) and (max-width: 89.9em),
+#{$screen} and (min-resolution: 192dpi) and (max-width: 89.9em)
+{
+
   @import 'mob';
+
+  @media #{$screen} and (max-width: 20em) {
+
+    html{font-size:16px;}
+
+  }
+
+  @media #{$screen} and (max-width: 40em) {
+
+    html{font-size:18px;}
+
+  }
+
+  @media #{$screen} and (max-width: 60em) {
+
+    html{font-size:20px;}
+
+  }
+
+  @media #{$screen} and (max-width: 90em) {
+
+    html{font-size:22px;}
+
+  }
+
+  @media #{$screen} and (min-width: 90.1em) {
+
+    html{font-size:24px;}
+
+  }
+
+  @media  #{$screen} and (-webkit-min-device-pixel-ratio: 2) and (max-width: 89.9em),
+          #{$screen} and (min-resolution: 192dpi) and (max-width: 89.9em){
+
+     //      html{font-size:36px;}
+
+  }
+
 }
 
-@media only screen and (min-width: 50.063em and ($lowRes)) {
-  @import 'full';
-}
 
-//mid res
 
-@media only screen and (max-width: 65em) and ($midRes){
-  @import 'mob';
-}
+// Desktop
 
-@media only screen and (min-width: 65.063em and ($midRes)) {
-  @import 'full';
-}
+@media  #{$screen} and (-webkit-max-device-pixel-ratio: 1.24) and (min-width: 50em),
+        #{$screen} and (max-resolution: 119dpi) and (min-width: 50em),
+        #{$screen} and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 65em),
+        #{$screen} and (min-resolution: 120dpi) and (min-width: 65em),
+        #{$screen} and (-webkit-min-device-pixel-ratio: 1.5) and (min-width: 75em),
+        #{$screen} and (min-resolution: 144dpi) and (min-width: 75em),
+        #{$screen} and (-webkit-min-device-pixel-ratio: 2) and (min-width: 90em),
+        #{$screen} and (min-resolution: 192dpi) and (min-width: 90em)
+        {
 
-//mid res
+          @import 'full';
 
-@media only screen and (max-width: 80em) and ($retina){
-  @import 'mob';
-}
+          @media #{$screen} and (min-width: 50em) {
 
-@media only screen and (min-width: 80.063em and ($retina)) {
-  @import 'full';
-}
+            html{font-size:18px;}
+
+          }
+
+          @media #{$screen} and (min-width: 60em) {
+
+            html{font-size:20px;}
+
+          }
+
+          @media #{$screen} and (min-width: 70em) {
+
+            html{font-size:22px;}
+
+          }
+
+          @media #{$screen} and (min-width: 80em) {
+
+            html{font-size:24px;}
+
+          }
+
+          @media #{$screen} and (min-width: 140em) {
+
+            html{font-size:26px;}
+
+          }
+
+          @media #{$screen} and (min-width: 140.1em) {
+
+            html{font-size:28px;}
+
+          }
+
+          @media  #{$screen} and (-webkit-min-device-pixel-ratio: 2) and (max-width: 89.9em),
+                  #{$screen} and (min-resolution: 192dpi) and (max-width: 89.9em),
+                  #{$screen} and (min-width: 2000px)
+          {
+
+            html{font-size:36px;}
+
+          }
+
+        }
 

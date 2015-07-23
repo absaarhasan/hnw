@@ -1,57 +1,6 @@
 $base-font-size: 12px;
 $bfs: $base-font-size;
 
-$screen: "only screen"; /* Define mobile styles */
-
-$smallMax:"(max-width: 40em)"; /* max-width 640px, mobile-only styles, use when QAing mobile issues */
-
-$mediumMin: "(min-width: 40.063em)";  /* min-width 641px, medium screens */
-
-
-// Small screens
-@media #{$screen} {
-
-  html{font-size:14px;}
-
-}
-
-// Small screens only $midRes
-
-@media #{$screen} and #{$smallMax} {
-
-  html{font-size:16px;}
-
-}
-
-@media #{$screen} and #{$smallMax} and #{$midRes} {
-
-  html{font-size:20px;}
-
-}
-
-
-
-// Medium screens
-@media #{$screen} and #{$mediumMin} {
-
-  html{font-size:18px;}
-}
-
-@media #{$screen} and #{$mediumMin} and #{$midRes}{
-
-  html{font-size:22px;}
-}
-
-
-
-
-
-// Retina
-@media #{$screen} and #{$retina}{
- // html{font-size:18px;}
-}
-
-
 
 .full{
   display:none;
@@ -182,12 +131,13 @@ section.main{
       width:100%;
 
       button{
-        right:5%;
+
         width:em(20px, $bfs);
         height:em(20px, $bfs);
         background-size: em(20px, $bfs) em(10px, $bfs) ;
         background-position:center;
         top: em(10px, $bfs);
+        right:5%;
         text-indent: -99999px;
       }
     }
@@ -322,10 +272,7 @@ footer.pagination {
 
 }
 
-.alert-banner{
 
-
-}
 
 .form-row:nth-child(1) {
   margin-top: em(10px, $bfs);
