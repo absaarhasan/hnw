@@ -1,11 +1,11 @@
 @import 'global';
 
 
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 60em){
   @import 'mob';
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 60.063em) {
   @import 'full';
 }
 
