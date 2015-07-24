@@ -17,6 +17,7 @@ $txt2: #0a5f98; // mid blue
 $txt3: #0f8add; // light blue
 $txt4: #fff;    // white
 $txt5: #ff3333; // red
+$txt6: #000; // black
 
 /*------------- FUNCTIONS -----------------*/
 
@@ -146,7 +147,7 @@ section.main{
 
   li{
     display:block;
-    border:1px solid $mainColor3;
+
 
   }
 
@@ -156,12 +157,13 @@ section.main{
     box-sizing: border-box;
     color:$txt4;
     text-decoration:none;
+    border:1px solid $mainColor3;
   }
 
   a:hover, a:active {
-    background-image: url("../images/arrow_back.svg");
-    background-repeat:no-repeat;
-    background-position:right center;
+    background-color:$mainColor4;
+    color: $txt6;
+    border: 1px solid $mainColor5;
   }
 }
 
@@ -171,7 +173,7 @@ section.main{
   background-image: url("../images/bg_tile1.svg"), url("../images/icon_q.svg");
   background-repeat: repeat-y, no-repeat;
   position:relative;
-
+  cursor: pointer;
 
   h3{
     color:$txt1;
@@ -274,7 +276,7 @@ footer.pagination {
   }
 
   input[type='radio']{
-    display:absolute;
+    position:absolute;
     top:0;
     left:0;
     height:1px;
@@ -308,6 +310,11 @@ footer.pagination {
     color:$txt3;
     position:absolute;
     text-align:right;
+  }
+
+  &.radio-group{
+    padding-bottom:0;
+
   }
 
 }

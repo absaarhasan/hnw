@@ -60,24 +60,25 @@ section.main {
     display: block;
     box-sizing: border-box; }
   #filter-menu li {
-    display: block;
-    border: 1px solid #fff; }
+    display: block; }
   #filter-menu a {
     display: block;
     box-sizing: border-box;
     color: #fff;
-    text-decoration: none; }
+    text-decoration: none;
+    border: 1px solid #fff; }
   #filter-menu a:hover, #filter-menu a:active {
-    background-image: url("../images/arrow_back.svg");
-    background-repeat: no-repeat;
-    background-position: right center; }
+    background-color: #fbfb2e;
+    color: #000;
+    border: 1px solid #000; }
 
 .result-tile {
   box-sizing: border-box;
   background-color: #fff;
   background-image: url("../images/bg_tile1.svg"), url("../images/icon_q.svg");
   background-repeat: repeat-y, no-repeat;
-  position: relative; }
+  position: relative;
+  cursor: pointer; }
   .result-tile h3 {
     color: #042236;
     display: inline-block;
@@ -133,7 +134,7 @@ footer.pagination {
       color: #0f8add;
       font-weight: 300; }
   .form-row input[type='radio'] {
-    display: absolute;
+    position: absolute;
     top: 0;
     left: 0;
     height: 1px;
@@ -156,6 +157,8 @@ footer.pagination {
     color: #0f8add;
     position: absolute;
     text-align: right; }
+  .form-row.radio-group {
+    padding-bottom: 0; }
 
 .form-row.error {
   background-color: #fbfb2e; }
@@ -351,9 +354,6 @@ section.main header {
   #filter-menu a {
     padding: 0.5rem 0.75rem;
     font-size: 1rem; }
-  #filter-menu a:hover, #filter-menu a:active {
-    background-size: 0.75rem 1.25rem;
-    border-right: 0.5rem solid transparent; }
 
 .result-tile:nth-child(2) {
   margin-top: 0.75rem; }
@@ -388,27 +388,27 @@ section.main header {
     height: 3rem;
     width: 1.75rem; }
 
-footer.pagination {
+footer.pagination.full {
   padding-top: 1rem;
   height: 3.5rem; }
-  footer.pagination button {
+  footer.pagination.full button {
     width: 0.65rem;
     height: 1.25rem;
     background-size: 0.65rem 1.25rem;
     background-position: right top;
     text-indent: -99999px;
     background-position: right top; }
-    footer.pagination button#prev {
+    footer.pagination.full button#prev {
       background-image: url("../images/arrow_prev.svg");
       margin-right: 0.75rem; }
-    footer.pagination button#next {
+    footer.pagination.full button#next {
       background-image: url("../images/arrow_next.svg");
       margin-left: 0.75rem; }
-  footer.pagination p {
+  footer.pagination.full p {
     display: inline-block;
     color: #0a5f98;
     font-size: 1rem; }
-  footer.pagination span {
+  footer.pagination.full span {
     color: #042236;
     font-weight: 400; }
 
@@ -441,6 +441,8 @@ footer.pagination {
     left: 12%;
     width: 22.5rem;
     font-size: 1rem; }
+  .form-row.radio-group div {
+    padding-bottom: 1.25rem; }
 
 .alert-banner {
   margin: 1rem 4% 0 4%;
@@ -609,6 +611,18 @@ footer.main {
 @media only screen and (min-width: 1800px) {
   html {
     font-size: 28px; } }
+@media only screen and (min-width: 2000px) {
+  html {
+    font-size: 30px; } }
+@media only screen and (min-width: 2200px) {
+  html {
+    font-size: 32px; } }
+@media only screen and (min-width: 2400px) {
+  html {
+    font-size: 34px; } }
+@media only screen and (min-width: 2600px) {
+  html {
+    font-size: 36px; } }
 @media only screen and (max-device-width: 800px), only screen and (max-width: 800px) {
   .full {
     display: none; }
@@ -634,13 +648,13 @@ footer.main {
       header.main nav.mob button {
         position: absolute;
         right: 5%;
-        top: 2.08333rem;
+        top: 1.66667rem;
         z-index: 22;
         display: inline-block;
         text-indent: -99999px;
         background-color: #77bf26;
         width: 5rem;
-        height: 2.91667rem;
+        height: 3.33333rem;
         background-image: url("../images/arrow_menu.svg");
         background-repeat: no-repeat;
         background-size: 2.41667rem 1.25rem;
@@ -655,6 +669,7 @@ footer.main {
         position: absolute;
         top: 0;
         left: 0;
+        border-top: 1px solid #77bf26;
         -webkit-box-shadow: 0px 4px 8px 2px rgba(2, 18, 28, 0.25);
         -moz-box-shadow: 0px 4px 8px 2px rgba(2, 18, 28, 0.25);
         box-shadow: 0px 4px 8px 2px rgba(2, 18, 28, 0.25); }
@@ -668,32 +683,38 @@ footer.main {
       header.main nav.mob ul {
         box-sizing: border-box;
         display: block;
-        margin-top: 5rem;
+        margin-top: 4.91667rem;
         padding-top: 0.83333rem;
         background-color: #77bf26;
         padding-bottom: 4.16667rem; }
         header.main nav.mob ul li {
           display: block;
           height: 3.33333rem;
-          margin: 2.08333rem 5% 0;
-          box-sizing: border-box;
-          border: 1px solid #fff; }
+          margin: 2.08333rem 5%;
+          box-sizing: border-box; }
           header.main nav.mob ul li a {
             box-sizing: border-box;
             display: block;
-            border-left: 0.83333rem solid transparent;
-            border-right: 0.83333rem solid transparent;
+            border: 1px solid #fff;
             text-align: left;
             height: 100%;
             text-decoration: none;
-            padding-top: 0.41667rem;
+            padding: 0.41667rem 0.83333rem 0 0.83333rem;
             font-size: 1.66667rem;
             color: #fff; }
           header.main nav.mob ul li a:hover, header.main nav.mob ul li a:active {
-            background-image: url("../images/arrow_back.svg");
-            background-repeat: no-repeat;
-            background-size: 1.25rem 2.08333rem;
-            background-position: right center; }
+            background-color: #fbfb2e;
+            color: #000;
+            border: 1px solid #000; }
+
+  section.home header {
+    background-image: none; }
+
+  section.login header, section.register header {
+    background-image: none; }
+
+  section.poll header, section.vote header, section.add-poll header {
+    background-image: none; }
 
   section.main header {
     height: 3.75rem; }
@@ -702,7 +723,8 @@ footer.main {
       margin: 0.41667rem 0 0 5%; }
     section.main header .filter-menu {
       top: 0;
-      width: 100%; }
+      width: 100%;
+      right: inherit; }
       section.main header .filter-menu button {
         width: 1.66667rem;
         height: 1.66667rem;
@@ -710,10 +732,13 @@ footer.main {
         background-position: center;
         top: 0.83333rem;
         right: 5%;
-        text-indent: -99999px; }
+        text-indent: -99999px;
+        padding-right: 0;
+        text-align: left; }
     section.main header .back-button {
       top: 0;
-      width: 100%; }
+      width: 100%;
+      right: inherit; }
       section.main header .back-button button {
         top: 0;
         right: 5%;
@@ -721,12 +746,15 @@ footer.main {
         height: 3.75rem;
         background-size: 0.83333rem 1.66667rem;
         background-position: center right;
-        text-indent: -99999px; }
+        text-indent: -99999px;
+        padding-right: 0;
+        text-align: left; }
 
   #filter-menu {
     right: 0;
     background-color: #77bf26;
     width: 100%;
+    border-top: 1px solid #000;
     padding-top: 4.16667rem; }
     #filter-menu h3 {
       position: absolute;
@@ -741,9 +769,6 @@ footer.main {
     #filter-menu a {
       padding: 0.83333rem 0.83333rem;
       font-size: 1.66667rem; }
-    #filter-menu a:hover, #filter-menu a:active {
-      background-size: 0.83333rem 1.66667rem;
-      border-right: 0.83333rem solid transparent; }
 
   .result-tile {
     margin-top: 0.41667rem;
@@ -755,11 +780,15 @@ footer.main {
       max-width: 65%;
       line-height: 1.58333rem; }
     .result-tile ul {
-      margin-left: 15%; }
+      margin: 0 0 0 15%; }
     .result-tile li {
       font-weight: 400;
       line-height: 1.58333rem;
-      font-size: 1rem; }
+      font-size: 1rem;
+      height: auto;
+      display: inherit; }
+      .result-tile li.full {
+        display: none; }
       .result-tile li span {
         font-weight: 400; }
     .result-tile p {
@@ -767,7 +796,11 @@ footer.main {
       margin-left: 15%;
       padding-bottom: 15px;
       line-height: 1.58333rem;
-      font-size: 1rem; }
+      font-size: 1rem;
+      position: inherit;
+      right: 0;
+      top: 0;
+      margin-top: 0; }
     .result-tile button {
       right: 5%;
       top: 50%;
@@ -776,10 +809,10 @@ footer.main {
       height: 3.75rem;
       width: 2.08333rem; }
 
-  footer.pagination {
+  footer.pagination.mob {
     height: 4.16667rem;
     padding-top: 0.83333rem; }
-    footer.pagination button {
+    footer.pagination.mob button {
       background-image: url("../images/arrow_prev.svg"), url("../images/arrow_next.svg");
       background-position: left center, right center;
       background-size: 0.83333rem 1.66667rem;
@@ -788,7 +821,8 @@ footer.main {
       font-weight: 400;
       font-size: 1rem;
       height: 2.08333rem;
-      line-height: 2.08333rem; }
+      line-height: 2.08333rem;
+      cursor: pointer; }
 
   .form-row:nth-child(1) {
     margin-top: 0.83333rem; }
@@ -822,6 +856,10 @@ footer.main {
       left: 5%;
       width: 90%;
       font-size: 1.16667rem; }
+    .form-row.radio-group div {
+      padding-bottom: 1.66667rem; }
+    .form-row span.icon {
+      display: none; }
 
   .alert-banner {
     margin: 1rem 5% 0 5%;
@@ -830,10 +868,18 @@ footer.main {
     .alert-banner h2 {
       font-size: 1.16667rem; }
 
-  .form-row.error p.error {
-    text-align: center;
-    margin-top: 0.83333rem;
-    padding: 0.41667rem 5% 0.83333rem 5%; }
+  .form-row.error {
+    background-image: none; }
+    .form-row.error p.error {
+      text-align: center;
+      margin-top: 0.83333rem;
+      padding: 0.41667rem 5% 0.83333rem 5%;
+      font-size: 1rem;
+      line-height: inherit;
+      position: inherit;
+      left: 0;
+      top: 0;
+      max-width: inherit; }
 
   footer.form-button {
     margin-top: 2.91667rem;
@@ -847,16 +893,21 @@ footer.main {
     margin-top: 0.41667rem;
     padding: 0.83333rem 0 2.5rem 0;
     background-size: 0.41667rem 0.41667rem, 2.08333rem 2.08333rem;
-    background-position: left, 5% 0.83333rem; }
+    background-position: left, 5% 0.83333rem;
+    position: inherit;
+    min-height: inherit; }
     section.poll-display h3 {
       margin: 0 15%;
       font-size: 1.16667rem;
-      line-height: 1.83333rem; }
+      line-height: 1.83333rem;
+      max-width: inherit; }
     section.poll-display p.main-result {
       font-size: 2rem;
       margin: 0 15%;
       display: inline-block;
-      margin-top: 0.83333rem; }
+      margin-top: 0.83333rem;
+      max-width: inherit;
+      clear: inherit; }
     section.poll-display table {
       margin: 1.25rem 5% 0 5%;
       width: 90%; }
@@ -871,12 +922,18 @@ footer.main {
       display: inline-block;
       height: 20rem;
       width: 100%;
-      background-size: 20rem 20rem; }
+      background-size: 20rem 20rem;
+      position: inherit;
+      left: inherit;
+      top: inherit; }
     section.poll-display p.total-votes {
       display: inline-block;
       margin: 2.08333rem 5% 0 5%;
       width: 90%;
-      font-size: 1.16667rem; }
+      font-size: 1.16667rem;
+      position: inherit;
+      right: inherit;
+      bottom: inherit; }
     section.poll-display button {
       position: relative;
       left: 50%;
@@ -884,15 +941,24 @@ footer.main {
       margin: 2.08333rem 0 0 -6.66667rem;
       width: 13.33333rem;
       height: 2.91667rem;
-      font-size: 1rem; }
+      font-size: 1rem;
+      top: 0;
+      right: inherit;
+      bottom: inherit; }
     section.poll-display p.author {
       font-size: 1.16667rem;
       margin: 2.08333rem 5% 0 5%;
-      line-height: 1.66667rem; }
+      line-height: 1.66667rem;
+      position: inherit;
+      right: inherit;
+      bottom: inherit; }
     section.poll-display p.time-stamp {
       font-size: 1.16667rem;
       margin: 0 5% 0 5%;
-      line-height: 1.66667rem; }
+      line-height: 1.66667rem;
+      position: inherit;
+      right: inherit;
+      bottom: inherit; }
 
   section.poll-comments div.comment:nth-child(2) {
     margin-top: 0; }
@@ -900,11 +966,22 @@ footer.main {
     margin-top: 0.41667rem;
     background-size: 0.41667rem 0.41667rem;
     padding: 1.25rem 5%; }
-  section.poll-comments h3 {
-    font-size: 1.16667rem;
-    font-weight: 400; }
-  section.poll-comments p {
-    font-size: 1.16667rem; }
+    section.poll-comments div.comment div {
+      margin-right: 0;
+      padding: 0;
+      background-image: none,none;
+      background-repeat: no-repeat; }
+    section.poll-comments div.comment h3 {
+      font-size: 1.16667rem;
+      font-weight: 400;
+      margin-top: 0; }
+    section.poll-comments div.comment p.time-stamp {
+      font-size: 1.16667rem;
+      display: inherit;
+      margin-left: 0; }
+    section.poll-comments div.comment p.comment {
+      font-size: 1.16667rem;
+      line-height: inherit; }
 
   footer.main {
     height: 16.66667rem; }
@@ -954,8 +1031,23 @@ footer.main {
 @media only screen and (max-device-width: 800px) and (max-device-width: 300px), only screen and (max-width: 800px) and (max-device-width: 300px) {
   html {
     font-size: 12px; } }
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-width: 2000px) {
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
+  html {
+    font-size: 62px; } }
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-device-width: 2560px), only screen and (min-resolution: 192dpi) and (max-device-width: 2560px) {
+  html {
+    font-size: 44px; } }
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-device-width: 1600px), only screen and (min-resolution: 192dpi) and (max-device-width: 1600px) {
   html {
     font-size: 36px; } }
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-device-width: 1280px), only screen and (min-resolution: 192dpi) and (max-device-width: 1280px) {
+  html {
+    font-size: 22px; } }
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-device-width: 960px), only screen and (min-resolution: 192dpi) and (max-device-width: 960px) {
+  html {
+    font-size: 20px; } }
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-device-width: 800px), only screen and (min-resolution: 192dpi) and (max-device-width: 800px) {
+  html {
+    font-size: 18px; } }
 
 /*# sourceMappingURL=app.css.map */

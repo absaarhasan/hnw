@@ -163,12 +163,7 @@ section.main{
 
   }
 
-  a:hover, a:active {
 
-    background-size: em(15px, $bfs) em(25px, $bfs)  ;
-
-    border-right: em(10px, $bfs) solid transparent;
-  }
 
 
 }
@@ -229,7 +224,7 @@ section.main{
     }
   }
 
-footer.pagination {
+footer.pagination.full {
 
 
   padding-top:em(20px, $bfs);
@@ -318,6 +313,14 @@ footer.pagination {
     left:12%;
     width:em(450px, $bfs);
     font-size: em(20px, $bfs);
+  }
+
+  &.radio-group{
+    div{
+      padding-bottom:em(25px, $bfs);
+
+    }
+
   }
 
 }

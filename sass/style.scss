@@ -19,6 +19,14 @@ $screen: "only screen";
 
 @media #{$screen} and (min-width: 1800px) { html{font-size:28px;} }
 
+@media #{$screen} and (min-width: 2000px) { html{font-size:30px;} }
+
+@media #{$screen} and (min-width: 2200px) { html{font-size:32px;} }
+
+@media #{$screen} and (min-width: 2400px) { html{font-size:34px;} }
+
+@media #{$screen} and (min-width: 2600px) { html{font-size:36px;} }
+
 
 //Mobile
 
@@ -55,11 +63,49 @@ $screen: "only screen";
 //retina
 
 @media  #{$screen} and (-webkit-min-device-pixel-ratio: 2),
-        #{$screen} and (min-resolution: 192dpi),
-        #{$screen} and (min-width: 2000px)
+        #{$screen} and (min-resolution: 192dpi)
+
         {
 
-          html{font-size:36px;}
+                html{font-size:62px;}
+        }
 
+@media  #{$screen} and (-webkit-min-device-pixel-ratio: 2) and (max-device-width:2560px),
+        #{$screen} and (min-resolution: 192dpi) and (max-device-width:2560px)
+
+        {
+
+                html{font-size:44px;}
+        }
+
+@media  #{$screen} and (-webkit-min-device-pixel-ratio: 2) and (max-device-width:1600px),
+        #{$screen} and (min-resolution: 192dpi) and (max-device-width:1600px)
+
+        {
+
+                html{font-size:36px;}
+        }
+
+@media  #{$screen} and (-webkit-min-device-pixel-ratio: 2) and (max-device-width:1280px),
+        #{$screen} and (min-resolution: 192dpi) and (max-device-width:1280px)
+
+        {
+
+                html{font-size:22px;}
+        }
+
+@media  #{$screen} and (-webkit-min-device-pixel-ratio: 2) and (max-device-width:960px),
+        #{$screen} and (min-resolution: 192dpi) and (max-device-width:960px)
+
+        {
+
+                html{font-size:20px;}
+        }
+
+@media  #{$screen} and (-webkit-min-device-pixel-ratio: 2) and (max-device-width:800px),
+        #{$screen} and (min-resolution: 192dpi) and (max-device-width:800px)
+
+        {
+                html{font-size:18px;}
         }
 

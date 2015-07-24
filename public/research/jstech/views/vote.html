@@ -19,7 +19,7 @@
 
         </div>
 
-        <div class="form-row" ng-class="{error: (vote.$submitted || vote.option.$touched) && !vote.option.$valid}">
+        <div class="form-row" ng-class="{error: (vote.$submitted || vote.comment.$touched) && !vote.comment.$valid}">
             <label for="comments">Add comment</label>
             <textarea id="comments" name="comment" ng-model="voteForm.comment" ng-maxlength="600" required /></textarea>
             <p class="count"><span id="count">{{voteForm.comment.length > 0 ? voteForm.comment.length : "0"}}</span> of 600</p>

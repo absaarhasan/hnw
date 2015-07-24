@@ -34,13 +34,13 @@ header.main {
     button {
       position:absolute;
       right:5%;
-      top: em(25px, $bfs);
+      top: em(20px, $bfs);
       z-index:22;
       display:inline-block;
       text-indent: -99999px;
       background-color: $mainColor1;
       width:em(60px, $bfs);
-      height:em(35px, $bfs);
+      height:em(40px, $bfs);
       background-image:  url("../images/arrow_menu.svg");
       background-repeat: no-repeat;
       background-size: em(29px, $bfs) em(15px, $bfs);
@@ -58,6 +58,7 @@ header.main {
       position:absolute;
       top:0;
       left:0;
+      border-top:1px solid $mainColor1;
       @include drop-shadow(0px, 4px, 8px, 2px, 0.25);
 
     }
@@ -76,7 +77,7 @@ header.main {
 
       box-sizing: border-box;
       display:block;
-      margin-top: em(60px, $bfs);
+      margin-top: em(59px, $bfs);
       padding-top:em(10px, $bfs);
       background-color: $mainColor1;
       padding-bottom: em(50px, $bfs);
@@ -84,21 +85,19 @@ header.main {
       li {
         display:block;
         height: em(40px, $bfs);
-        margin:em(25px, $bfs) 5% 0;
+        margin:em(25px, $bfs) 5%;
         box-sizing: border-box;
-        border: 1px solid $mainColor3;
+
 
         a {
 
           box-sizing: border-box;
           display:block;
-          border-left:em(10px, $bfs) solid transparent;
-          border-right:em(10px, $bfs) solid transparent;
-
+          border: 1px solid $mainColor3;
           text-align:left;
           height:100%;
           text-decoration:none;
-          padding-top: em(5px, $bfs);
+          padding: em(5px, $bfs) em(10px, $bfs) 0 em(10px, $bfs);
           font-size: em(20px, $bfs);
           color: $txt4;
 
@@ -106,10 +105,10 @@ header.main {
         }
 
         a:hover, a:active {
-          background-image: url("../images/arrow_back.svg");
-          background-repeat:no-repeat;
-          background-size: em(15px, $bfs) em(25px, $bfs)  ;
-          background-position:right center;
+
+          background-color:$mainColor4;
+          color: $txt6;
+          border: 1px solid $mainColor5;
         }
 
       }
@@ -118,6 +117,24 @@ header.main {
 
   }
 
+}
+
+section.home{
+  header{
+    background-image: none;
+  }
+}
+
+section.login, section.register {
+  header{
+    background-image: none;
+  }
+}
+
+section.poll, section.vote, section.add-poll {
+  header{
+    background-image: none;
+  }
 }
 
 section.main{
@@ -134,6 +151,10 @@ section.main{
       top:0;
       width:100%;
 
+      //fixes
+      right: inherit;
+
+
       button{
 
         width:em(20px, $bfs);
@@ -143,12 +164,19 @@ section.main{
         top: em(10px, $bfs);
         right:5%;
         text-indent: -99999px;
+
+        //fixes
+        padding-right: 0;
+        text-align: left;
       }
     }
 
     .back-button {
       top:0;
       width:100%;
+
+      //fixes
+      right: inherit;
 
       button{
         top: 0;
@@ -157,8 +185,11 @@ section.main{
         height:em(45px, $bfs);
         background-size: em(10px, $bfs) em(20px, $bfs)  ;
         background-position:center right;
-
         text-indent: -99999px;
+
+        //fixes
+        padding-right: 0;
+        text-align: left;
       }
     }
 
@@ -173,7 +204,7 @@ section.main{
   right: 0;
   background-color: $mainColor1;
   width: 100%;
-
+  border-top: 1px solid $mainColor5;
   padding-top: em(50px, $bfs);
 
 
@@ -199,13 +230,6 @@ section.main{
     font-size: em(20px, $bfs);
   }
 
-  a:hover, a:active {
-
-    background-size: em(10px, $bfs) em(20px, $bfs)  ;
-
-    border-right: em(10px, $bfs) solid transparent;
-  }
-
 
 }
 
@@ -225,7 +249,7 @@ section.main{
 
   ul{
 
-    margin-left: 15%;
+    margin: 0 0 0 15%;
 
   }
 
@@ -234,6 +258,14 @@ section.main{
     font-weight:400;
     line-height: em(19px, $bfs);
     font-size: em(12px, $bfs);
+
+    // fixes
+    height:auto;
+    display: inherit;
+    &.full{
+      display:none;
+    }
+
     span{
       font-weight:400;
     }
@@ -245,6 +277,13 @@ section.main{
     padding-bottom:15px;
     line-height: em(19px, $bfs);
     font-size: em(12px, $bfs);
+
+    // fixes
+    position: inherit;
+    right: 0;
+    top: 0;
+    margin-top: 0;
+
   }
 
   button {
@@ -257,7 +296,7 @@ section.main{
   }
 }
 
-footer.pagination {
+footer.pagination.mob {
 
   height:em(50px, $bfs);
   padding-top:em(10px, $bfs);
@@ -272,6 +311,7 @@ footer.pagination {
     font-size:em(12px, $bfs);
     height:em(25px, $bfs);
     line-height:em(25px, $bfs);
+    cursor: pointer;
   }
 
 }
@@ -328,6 +368,19 @@ footer.pagination {
     font-size: em(14px, $bfs);
   }
 
+  &.radio-group{
+
+    div{
+      padding-bottom:em(20px, $bfs);
+
+    }
+
+  }
+
+  span.icon {
+    display:none;
+  }
+
 }
 
 .alert-banner{
@@ -344,10 +397,21 @@ footer.pagination {
 }
 
 .form-row.error {
+
+  //fixes
+  background-image: none;
   p.error {
     text-align:center;
     margin-top:em(10px, $bfs);
     padding:em(5px, $bfs) 5% em(10px, $bfs) 5%;
+
+    //fixes
+    font-size: em(12px, $bfs);
+    line-height: inherit;
+    position: inherit;
+    left: 0;
+    top: 0;
+    max-width: inherit;
   }
 }
 
@@ -372,10 +436,17 @@ section.poll-display{
   background-size: em(5px, $bfs) em(5px, $bfs),em(25px, $bfs) em(25px, $bfs);
   background-position: left, 5% em(10px, $bfs);
 
+  //fixes
+  position: inherit;
+  min-height: inherit;
+
   h3 {
     margin: 0 15%;
     font-size: em(14px, $bfs);
     line-height:em(22px, $bfs);
+
+    //fixes
+    max-width: inherit;
   }
 
   p.main-result{
@@ -383,6 +454,10 @@ section.poll-display{
     margin: 0 15%;
     display:inline-block;
     margin-top: em(10px, $bfs);
+
+    //fixes
+    max-width: inherit;
+    clear: inherit;
 
   }
 
@@ -409,6 +484,11 @@ section.poll-display{
     width:100%;
     background-size: em(240px, $bfs) em(240px, $bfs);
 
+    //fixes
+    position: inherit;
+    left: inherit;
+    top: inherit;
+
   }
 
   p.total-votes {
@@ -416,6 +496,11 @@ section.poll-display{
     margin:em(25px, $bfs) 5% 0 5%;
     width:90%;
     font-size:em(14px, $bfs);
+
+    //fixes
+    position: inherit;
+    right: inherit;
+    bottom: inherit;
 
   }
 
@@ -427,18 +512,33 @@ section.poll-display{
     width:em(160px, $bfs);
     height:em(35px, $bfs);
     font-size:em(12px, $bfs);
+
+    //fixes
+    top:0;
+    right: inherit;
+    bottom: inherit;
   }
 
   p.author {
     font-size:em(14px, $bfs);
     margin:em(25px, $bfs) 5% 0 5%;
     line-height: em(20px, $bfs);
+
+    //fixes
+    position: inherit;
+    right: inherit;
+    bottom: inherit;
   }
 
   p.time-stamp {
     font-size:em(14px, $bfs);
     margin:0 5% 0 5%;
     line-height: em(20px, $bfs);
+
+    //fixes
+    position: inherit;
+    right: inherit;
+    bottom: inherit;
   }
 }
 
@@ -452,20 +552,46 @@ section.poll-comments{
     margin-top: em(5px, $bfs);
     background-size: em(5px, $bfs) em(5px, $bfs);
     padding: em(15px, $bfs) 5%;
+
+    //fixes
+    div{
+      margin-right: 0;
+      padding: 0;
+      background-image: none,none;
+      background-repeat: no-repeat;
+
+
+    }
+
+    h3 {
+
+      font-size:em(14px, $bfs);
+      font-weight:400;
+
+      //fixes
+      margin-top:0;
+
+    }
+
+    p.time-stamp {
+      font-size:em(14px, $bfs);
+
+      //fixes
+      display: inherit;
+      margin-left:0;
+
+    }
+
+    p.comment {
+
+      font-size:em(14px, $bfs);
+      line-height: inherit;
+    }
   }
 
-  h3 {
 
-    font-size:em(14px, $bfs);
-    font-weight:400;
 
-  }
 
-  p {
-
-    font-size:em(14px, $bfs);
-
-  }
 
 
 
