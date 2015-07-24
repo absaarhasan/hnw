@@ -6,6 +6,10 @@ $bfs: $base-font-size;
   display:none;
 }
 
+.mob {
+  display:inherit;
+}
+
 header.main {
   padding-top:  em(10px, $bfs);
   height:em(90px, $bfs);
