@@ -9435,13 +9435,15 @@ function jqueryInit() {
         showMobMenu()
     });
 
-    $("div.filter-menu").find('button').keyup(function (event) {
+    $('body').on('keyup', "div.filter-menu button", function (event) {
+
         if (event.which == 13) {
             showMobMenu()
         }
     });
 
-    $("div.filter-menu").on("click", "button", function () {
+    $('body').on('click', "div.filter-menu button", function () {
+
         showFilterMenu()
     });
 

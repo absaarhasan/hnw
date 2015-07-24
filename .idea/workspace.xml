@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad697854-b034-4e55-b6a1-539b86226676" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/journal/j._0" afterPath="$PROJECT_DIR$/data/journal/j._0" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/journal/lsn" afterPath="$PROJECT_DIR$/data/journal/lsn" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/app.js" afterPath="$PROJECT_DIR$/public/assets/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/research/jstech/js/controllers.js" afterPath="$PROJECT_DIR$/public/research/jstech/js/controllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/research/jstech/views/main.html" afterPath="$PROJECT_DIR$/public/research/jstech/views/main.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/main.js" afterPath="$PROJECT_DIR$/tmp/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="hnwrd.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,8 +30,8 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.021802325" vertical-offset="0" max-vertical-offset="1725">
-              <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.78488374" vertical-offset="0" max-vertical-offset="1755">
+              <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -118,9 +113,9 @@
         <option value="$PROJECT_DIR$/sass/_global.scss" />
         <option value="$PROJECT_DIR$/public/research/jstech/views/vote.html" />
         <option value="$PROJECT_DIR$/sass/_mob.scss" />
-        <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/public/research/jstech/js/controllers.js" />
         <option value="$PROJECT_DIR$/public/research/jstech/views/main.html" />
+        <option value="$PROJECT_DIR$/js/main.js" />
       </list>
     </option>
   </component>
@@ -926,8 +921,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.021802325" vertical-offset="0" max-vertical-offset="1725">
-          <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.78488374" vertical-offset="0" max-vertical-offset="1755">
+          <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
           <folding />
         </state>
       </provider>
