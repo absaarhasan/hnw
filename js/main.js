@@ -12,6 +12,10 @@ function jqueryInit() {
         closeMenu();
     });
 
+    $('body').on('click', "div#overlay", function () {
+        closeMenu();
+    });
+
     $("nav.mob").find('button').keyup(function (event) {
         if (event.which == 13) {
             showMobMenu()

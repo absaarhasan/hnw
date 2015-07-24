@@ -26,6 +26,14 @@ function mainCtrl($scope, $http, $state, $stateParams, $rootScope, $timeout) {
 
     }
 
+    $scope.fakeLink = function ($event, state) {
+
+        $event.preventDefault();
+        closeMenu();
+        $state.go(state)
+
+    }
+
     $scope.logout = function ($event) {
 
         $event.preventDefault();
