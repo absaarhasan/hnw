@@ -312,6 +312,11 @@ function AddPollSuccessCtrl($scope, $http, $state, $stateParams, $timeout) {
 // Controller for the Vote page
 function VoteCtrl($scope, $http, $state, $stateParams,$timeout) {
 
+    if (!$scope.session) {
+
+        $state.go('login');
+
+    } else {
         $scope.pageTitle = 'Vote';
         $scope.question = $stateParams.question;
         $scope.voteForm = {};
@@ -319,66 +324,66 @@ function VoteCtrl($scope, $http, $state, $stateParams,$timeout) {
         $scope.setOption = function (option) {
 
             $scope.voteForm.optionNumber = option;
-            console.log('Option = '+ option)
-            console.log('Scope option = '+ $scope.voteForm.optionNumber)
+            console.log('Option = ' + option)
+            console.log('Scope option = ' + $scope.voteForm.optionNumber)
         }
 
         $scope.voteForm.pollid = $stateParams.pollid;
 
         var voteOptions = [
-            {option:'option1', value: $stateParams.option1 },
-            {option:'option2', value: $stateParams.option2 }
+            {option: 'option1', value: $stateParams.option1},
+            {option: 'option2', value: $stateParams.option2}
         ];
 
         if ($stateParams.option3 !== "") {
-            voteOptions.push({option:'option3', value: $stateParams.option3 });
+            voteOptions.push({option: 'option3', value: $stateParams.option3});
         }
 
         if ($stateParams.option4 !== "") {
-            voteOptions.push({option:'option4', value: $stateParams.option4 });
+            voteOptions.push({option: 'option4', value: $stateParams.option4});
         }
 
         if ($stateParams.option5 !== "") {
-            voteOptions.push({option:'option5', value: $stateParams.option5 });
+            voteOptions.push({option: 'option5', value: $stateParams.option5});
         }
 
         $scope.options = voteOptions;
 
-        $timeout(function() {
+        $timeout(function () {
             radioGroup()
-        },0);
+        }, 0);
 
-    $scope.processForm = function () {
+        $scope.processForm = function () {
 
-        console.log('Poll id = ' + $scope.voteForm)
+            console.log('Poll id = ' + $scope.voteForm)
 
-        $http({
-            method: 'POST',
-            url: '/research/jstech/vote',
-            data: $.param($scope.voteForm),  // pass in data as strings
-            headers: {'Content-Type': 'application/x-www-form-urlencoded'}  // set the headers so angular passing info as form data (not request payload)
-        }).success(function (data, status, headers, config) {
+            $http({
+                method: 'POST',
+                url: '/research/jstech/vote',
+                data: $.param($scope.voteForm),  // pass in data as strings
+                headers: {'Content-Type': 'application/x-www-form-urlencoded'}  // set the headers so angular passing info as form data (not request payload)
+            }).success(function (data, status, headers, config) {
 
-            if (data.errors) {
-                console.log('Schema fail');
-                var errors = data.errors;
-                var errorMsg = [];
-                for (var key in errors) {
-                    errorMsg.push(errors[key].message);
+                if (data.errors) {
+                    console.log('Schema fail');
+                    var errors = data.errors;
+                    var errorMsg = [];
+                    for (var key in errors) {
+                        errorMsg.push(errors[key].message);
+                    }
+                    var msgString = "Oops ... " + errorMsg.join(" ... ").toLowerCase();
+                    $scope.$broadcast('showBanner', msgString);
+                    console.log(data.errors);
+                } else {
+                    console.log('New poll added');
+                    $state.go('vote.success', {pollid: data.pollid});
                 }
-                var msgString = "Oops ... " + errorMsg.join(" ... ").toLowerCase();
-                $scope.$broadcast('showBanner', msgString);
-                console.log(data.errors);
-            } else {
-                console.log('New poll added');
-                $state.go('vote.success', { pollid: data.pollid });
-            }
-        }).error(function (data, status, headers, config) {
-            $scope.$broadcast('showBanner', 'Oops ... no server connection!');
-        });
-    };
+            }).error(function (data, status, headers, config) {
+                $scope.$broadcast('showBanner', 'Oops ... no server connection!');
+            });
+        };
 
-
+    }
 
 }
 
